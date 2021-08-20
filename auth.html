@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Авторизация</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/style/jquery.jscrollpane.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<link href="css/resp.css" rel="stylesheet" type="text/css">
+	<!--[if IE]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body class="page_auth">
+
+
+<div class="auth_container">
+
+  <div class="auth_container_logo">
+    <a href="#"><img src="images/svg/logo2.svg" alt=""></a>
+  </div>
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="modal-title">Авторизация в сервисе</div>
+      <ul class="nav" role="tablist">
+        <li class="nav-item"><a class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-sms" role="tab" aria-controls="tab-sms" aria-selected="true" href="#">По SMS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="pill" data-bs-target="#tab-pass" role="tab" aria-controls="tab-sms" aria-selected="false">По паролю</a></li>
+      </ul>
+    </div>
+
+    <form action="#" method="POST">
+      <div class="form-line">
+        <label class="form-label">Номер телефона</label>
+        <input type="email" class="form-control" placeholder="+7">
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="tab-sms" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab-pass" role="tabpanel">
+          <div class="form-line">
+            <label class="form-label">Пароль</label>
+            <div class="form-control-pass">
+              <input type="password" class="form-control" placeholder="Введите пароль, указанный при регистрации" autocomplete="false">
+              <button class="form-control-pass-btn" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-line first">
+        <button class="btn btn-block">Войти</button>
+        <a href="auth2.html" class="btn btn-white btn-block">Создать новый аккаунт</a>
+      </div>
+    </form>			
+    <div class="modal-footer">Нажимая Создать новый аккаунт, я соглашаюсь с <a href="#">публичной офертой</a> и условиями <a href="#">обработки персональных данных</a>.</div>
+  </div>
+
+</div><!-- /auth_container -->
+
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/script/jquery.jscrollpane.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>

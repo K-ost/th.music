@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Th.Music</title>
+	<title>Авторизация</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -19,23 +19,40 @@
 <body class="page_auth">
 
 
-<div class="container">
+<div class="auth_container">
 
-  <p><a href="components.html" target="_blank">Компоненты</a></p>
-  <p><a href="dashboard.html" target="_blank">Дашборд</a></p>
-  <p><a href="feedback.html" target="_blank">Обратная связь</a></p>
-  <p><a href="notifications.html" target="_blank">Уведомления</a></p>
-  <p>
-    <a href="auth.html" target="_blank">Авторизация</a><br>
-    <a href="auth2.html" target="_blank">Авторизация 2</a><br>
-    <a href="auth3.html" target="_blank">Авторизация 3</a>
-  </p>
-  <p>
-    <a href="my-loads.html" target="_blank">Мои загрузки</a><br>
-    <a href="my-loads-data.html" target="_blank">Мои загрузки 2</a>
-  </p>
+  <div class="auth_container_logo">
+    <a href="#"><img src="images/svg/logo2.svg" alt=""></a>
+  </div>
 
-</div><!-- /container -->
+  <div class="modal-content">
+    <div class="modal-header last">
+      <div class="modal-title">Создание нового аккаунта</div>
+    </div>
+    <p>Указанный номер <b>+7912 345 94-00</b> не зарегистрирован в системе. Если вы просто ошиблись в написании, нажмите <a href="#">изменить</a>.<br> Если номер верный, продолжите регистрацию нового аккаунта.</p>
+    <form action="#" method="POST">
+      <div class="form-line">
+        <label class="form-label">Пароль</label>
+        <div class="form-control-pass">
+          <input type="password" class="form-control">
+          <button type="button" class="form-control-pass-btn"></button>
+        </div>
+      </div>
+      <div class="form-line last">
+        <label class="form-label">Повторите пароль</label>
+        <div class="form-control-pass">
+          <input type="password" class="form-control">
+          <button type="button" class="form-control-pass-btn"></button>
+        </div>
+      </div>
+      <div class="form-line last">
+        <button class="btn btn-block">Готово</button>
+      </div>
+      <div class="modal-footer">Нажимая <b>Готово</b>, я соглашаюсь с <a href="#">публичной офертой</a> и условиями <a href="#">обработки персональных данных</a>.</div>
+    </form>
+  </div>
+
+</div><!-- /auth_container -->
 
 
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script> -->

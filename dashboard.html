@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Обратная связь</title>
+	<title>Дашборд</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -82,7 +82,7 @@
 		<div class="header_icon header_icon_nav">
 			<a href="#" class="header_btn header_nav js_header_nav"></a>
 		</div>
-		<div class="header_title">Обратная связь</div>
+		<div class="header_title">Дашборд</div>
 	</div>
 	<div class="header_icons">
 		<div class="header_icon hide_mobile">
@@ -126,118 +126,178 @@
 	<div class="mainwrap_content">
 
     <div class="row">
-      <div class="col-12 col-xl-5">
-        <div class="wrapper">
-          <h2>Обратная связь</h2>
-          <p class="light_text">Оставляя отзывы и идеи, и сообщая об ошибках в сервисе, вы помогаете нам делать наш сервис лучше</p>
+      <div class="col-12 col-xl-7">
+        <div class="pagehead">
+          <h2>Статистика</h2>
           <ul class="nav">
-            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true" href="#">Сообщить о проблеме</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false" href="#">Предложить идею</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false" href="#">Оставить отзыв</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">День</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Неделя</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Месяц</a></li>
           </ul>
-
-          <div class="tab-content">
-            <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
-              <div class="form-line no_margin">
-                <label class="form-label">Опишите проблему и мы скоро ее исправим</label>
-                <textarea class="form-control" placeholder="Ваш ответ"></textarea>
+        </div>
+        <div class="wrapper wrapper-hidden">
+          <h2>Количество прослушиваний</h2>
+          <div class="swiper-container num_plays">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="btn-chart btn-chart-green">
+  <span class="btn-chart-title">все прослушивания</span>
+  <span class="btn-chart-count">8 653 987</span>
+</a>
               </div>
-            </div><!-- /tab-pane -->
-
-            <div class="tab-pane fade" id="tab-2" role="tabpanel">
-              <div class="form-line last">
-                <label class="form-label">Ваша идея</label>
-                <textarea class="form-control" placeholder="Ваш ответ"></textarea>
+              <div class="swiper-slide">
+                <a href="#" class="btn-chart btn-chart-red">
+  <span class="btn-chart-title">платные прослушивания</span>
+  <span class="btn-chart-count">8 653 987</span>
+</a>
               </div>
-              <div class="form-line no_margin">
-                <label class="form-label">Чем это улучшение будет полезно пользователям</label>
-                <textarea class="form-control" placeholder="Ваш ответ"></textarea>
+              <div class="swiper-slide">
+                <a href="#" class="btn-chart disabled">
+  <span class="btn-chart-title">ВКонтакте</span>
+  <span class="btn-chart-count">8 653 987</span>
+</a>
               </div>
-            </div><!-- /tab-pane -->
-
-            <div class="tab-pane fade" id="tab-3" role="tabpanel">
-              <div class="form-line no_margin">
-                <label class="form-label">Текст отзыва</label>
-                <textarea class="form-control" placeholder="Ваш ответ"></textarea>
+              <div class="swiper-slide">
+                <a href="#" class="btn-chart disabled">
+  <span class="btn-chart-title">Яндекс.Музыка</span>
+  <span class="btn-chart-count">8 653 987</span>
+</a>
               </div>
-            </div><!-- /tab-pane -->
-          </div><!-- / -->
+              <div class="swiper-slide">
+                <a href="#" class="btn-chart disabled">
+  <span class="btn-chart-title">Spotify</span>
+  <span class="btn-chart-count">8 653 987</span>
+</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="btn-chart disabled">
+  <span class="btn-chart-title">Apple Music</span>
+  <span class="btn-chart-count">8 653 987</span>
+</a>
+              </div>
+            </div>
+          </div><!-- /swiper-container -->
+          <hr>
+          <div class="pagehead">
+            <h2>График</h2>
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Прослушиваний</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">По площадкам</a></li>
+            </ul>
+          </div>
+          <div>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div><!-- /wrapper -->
+        <div class="wrapper wrapper-nobg text-right">
+          <a href="stat.html" class="btn btn-more">Смотреть всю статистику</a>
         </div><!-- /wrapper -->
       </div><!-- /col -->
 
-      <div class="col-12 col-xl-7">
-        <div class="wrapper">
-          <h2>Частозадаваемые вопросы</h2>
-          
-          <div class="search">
-  <input type="text" class="form-control" placeholder="Поиск проблемы">
-  <button type="button" class="search-button"></button>
-</div><!-- /search -->
 
+      <div class="col-12 col-xl-5">
+        <div class="pagehead">
+          <h2>Последние новости</h2>
           <ul class="nav">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Вопросы о релизах</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Вопросы о продвижении</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Другие вопросы</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Сегодня</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Неделя</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Месяц</a></li>
           </ul>
+        </div>
+        <div class="smallcard">
+  <a href="#" class="smallcard_img" style="background-image: url(images/svg/chess.svg);">
+    <!-- <a href="#"><img src="images/svg/chess.svg" alt=""></a> -->
+  </a>
+  <div class="smallcard_entry">
+    <div class="smallcard_top">
+      <div class="smallcard_title">Слишком Длинный Заголовок новости</div>
+      <div class="smallcard_text">
+        Короткое превью новости. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели Lorem ipsum dolor sit amet.
+      </div>
+    </div>
+    <div class="smallcard_footer">
+      <div class="smallcard_date">20 июля, 16:09</div>
+      <div class="smallcard_more"><a href="#">Подробнее</a></div>
+    </div>
+  </div>
+</div><!-- /smallcard -->
+<div class="smallcard">
+  <a href="#" class="smallcard_img" style="background-image: url(images/svg/chess.svg);">
+    <!-- <a href="#"><img src="images/svg/chess.svg" alt=""></a> -->
+  </a>
+  <div class="smallcard_entry">
+    <div class="smallcard_top">
+      <div class="smallcard_title">Заголовок новости</div>
+      <div class="smallcard_text">
+        Короткое превью новости. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели Lorem ipsum dolor sit amet.
+      </div>
+    </div>
+    <div class="smallcard_footer">
+      <div class="smallcard_date">20 июля, 16:09</div>
+      <div class="smallcard_more"><a href="#">Подробнее</a></div>
+    </div>
+  </div>
+</div><!-- /smallcard -->
+<div class="smallcard">
+  <a href="#" class="smallcard_img" style="background-image: url(images/svg/chess.svg);">
+    <!-- <a href="#"><img src="images/svg/chess.svg" alt=""></a> -->
+  </a>
+  <div class="smallcard_entry">
+    <div class="smallcard_top">
+      <div class="smallcard_title">Заголовок новости</div>
+      <div class="smallcard_text">
+        Короткое превью новости. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели Lorem ipsum dolor sit amet.
+      </div>
+    </div>
+    <div class="smallcard_footer">
+      <div class="smallcard_date">20 июля, 16:09</div>
+      <div class="smallcard_more"><a href="#">Подробнее</a></div>
+    </div>
+  </div>
+</div><!-- /smallcard -->
+<div class="smallcard">
+  <a href="#" class="smallcard_img" style="background-image: url(images/svg/chess.svg);">
+    <!-- <a href="#"><img src="images/svg/chess.svg" alt=""></a> -->
+  </a>
+  <div class="smallcard_entry">
+    <div class="smallcard_top">
+      <div class="smallcard_title">Заголовок новости</div>
+      <div class="smallcard_text">
+        Короткое превью новости. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели Lorem ipsum dolor sit amet.
+      </div>
+    </div>
+    <div class="smallcard_footer">
+      <div class="smallcard_date">20 июля, 16:09</div>
+      <div class="smallcard_more"><a href="#">Подробнее</a></div>
+    </div>
+  </div>
+</div><!-- /smallcard -->
+<div class="smallcard">
+  <a href="#" class="smallcard_img" style="background-image: url(images/svg/chess.svg);">
+    <!-- <a href="#"><img src="images/svg/chess.svg" alt=""></a> -->
+  </a>
+  <div class="smallcard_entry">
+    <div class="smallcard_top">
+      <div class="smallcard_title">Заголовок новости</div>
+      <div class="smallcard_text">
+        Короткое превью новости. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели Lorem ipsum dolor sit amet.
+      </div>
+    </div>
+    <div class="smallcard_footer">
+      <div class="smallcard_date">20 июля, 16:09</div>
+      <div class="smallcard_more"><a href="#">Подробнее</a></div>
+    </div>
+  </div>
+</div><!-- /smallcard -->
 
-          <div class="spoilers">
-            <div class="spoiler opened">
-  <button class="spoiler-title">Текст вопроса 1</button>
-  <div class="spoiler-content" style="display: block;">
-    <p><strong>Usage</strong> It is shown by default, until the collapse plugin adds the appropriate</p>
-    <code>.spoiler</code> - (parent)<br>
-    <code>.spoiler > .spoiler-title</code> - (childs) title<br>
-    <code>.spoiler > .spoiler-content</code> - (childs) any content with HTML tags
-  </div>
-</div><!-- /spoiler -->
-<div class="spoiler ">
-  <button class="spoiler-title">Текст вопроса 2</button>
-  <div class="spoiler-content" >
-    <p><strong>Usage</strong> It is shown by default, until the collapse plugin adds the appropriate</p>
-    <code>.spoiler</code> - (parent)<br>
-    <code>.spoiler > .spoiler-title</code> - (childs) title<br>
-    <code>.spoiler > .spoiler-content</code> - (childs) any content with HTML tags
-  </div>
-</div><!-- /spoiler -->
-<div class="spoiler ">
-  <button class="spoiler-title">Текст вопроса 3</button>
-  <div class="spoiler-content" >
-    <p><strong>Usage</strong> It is shown by default, until the collapse plugin adds the appropriate</p>
-    <code>.spoiler</code> - (parent)<br>
-    <code>.spoiler > .spoiler-title</code> - (childs) title<br>
-    <code>.spoiler > .spoiler-content</code> - (childs) any content with HTML tags
-  </div>
-</div><!-- /spoiler -->
-<div class="spoiler ">
-  <button class="spoiler-title">Текст вопроса 4</button>
-  <div class="spoiler-content" >
-    <p><strong>Usage</strong> It is shown by default, until the collapse plugin adds the appropriate</p>
-    <code>.spoiler</code> - (parent)<br>
-    <code>.spoiler > .spoiler-title</code> - (childs) title<br>
-    <code>.spoiler > .spoiler-content</code> - (childs) any content with HTML tags
-  </div>
-</div><!-- /spoiler -->
-<div class="spoiler ">
-  <button class="spoiler-title">Текст вопроса 5</button>
-  <div class="spoiler-content" >
-    <p><strong>Usage</strong> It is shown by default, until the collapse plugin adds the appropriate</p>
-    <code>.spoiler</code> - (parent)<br>
-    <code>.spoiler > .spoiler-title</code> - (childs) title<br>
-    <code>.spoiler > .spoiler-content</code> - (childs) any content with HTML tags
-  </div>
-</div><!-- /spoiler -->
-
-          </div>
-        </div><!-- /col -->
-      </div><!-- /row -->
-
-    </div><!-- /wrapper -->
-
+      </div><!-- /col -->
+    </div><!-- /row -->
 
 	</div><!-- /mainwrap_content -->
 </div><!-- /mainwrap -->
 
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/charts/line.js"></script>
 
 <div class="modal fade" id="uploadDemo" data-bs-keyboard="true" tabindex="-1">
 	<div class="modal-dialog modal-dialog-centered">

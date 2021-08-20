@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Обратная связь</title>
+	<title>Уведомления</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -82,7 +82,7 @@
 		<div class="header_icon header_icon_nav">
 			<a href="#" class="header_btn header_nav js_header_nav"></a>
 		</div>
-		<div class="header_title">Обратная связь</div>
+		<div class="header_title">Уведомления</div>
 	</div>
 	<div class="header_icons">
 		<div class="header_icon hide_mobile">
@@ -126,113 +126,68 @@
 	<div class="mainwrap_content">
 
     <div class="row">
-      <div class="col-12 col-xl-5">
-        <div class="wrapper">
-          <h2>Обратная связь</h2>
-          <p class="light_text">Оставляя отзывы и идеи, и сообщая об ошибках в сервисе, вы помогаете нам делать наш сервис лучше</p>
+      <div class="col-12">
+
+        <div class="notification_header">
           <ul class="nav">
-            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true" href="#">Сообщить о проблеме</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false" href="#">Предложить идею</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false" href="#">Оставить отзыв</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Все</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Результаты модерации</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Финансы</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Изменения в сервисе</a></li>
           </ul>
-
-          <div class="tab-content">
-            <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
-              <div class="form-line no_margin">
-                <label class="form-label">Опишите проблему и мы скоро ее исправим</label>
-                <textarea class="form-control" placeholder="Ваш ответ"></textarea>
-              </div>
-            </div><!-- /tab-pane -->
-
-            <div class="tab-pane fade" id="tab-2" role="tabpanel">
-              <div class="form-line last">
-                <label class="form-label">Ваша идея</label>
-                <textarea class="form-control" placeholder="Ваш ответ"></textarea>
-              </div>
-              <div class="form-line no_margin">
-                <label class="form-label">Чем это улучшение будет полезно пользователям</label>
-                <textarea class="form-control" placeholder="Ваш ответ"></textarea>
-              </div>
-            </div><!-- /tab-pane -->
-
-            <div class="tab-pane fade" id="tab-3" role="tabpanel">
-              <div class="form-line no_margin">
-                <label class="form-label">Текст отзыва</label>
-                <textarea class="form-control" placeholder="Ваш ответ"></textarea>
-              </div>
-            </div><!-- /tab-pane -->
-          </div><!-- / -->
-        </div><!-- /wrapper -->
-      </div><!-- /col -->
-
-      <div class="col-12 col-xl-7">
-        <div class="wrapper">
-          <h2>Частозадаваемые вопросы</h2>
-          
           <div class="search">
-  <input type="text" class="form-control" placeholder="Поиск проблемы">
+  <input type="text" class="form-control" placeholder="Поиск по уведомлениям">
   <button type="button" class="search-button"></button>
 </div><!-- /search -->
+        </div><!-- /notification_header -->
 
-          <ul class="nav">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Вопросы о релизах</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Вопросы о продвижении</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Другие вопросы</a></li>
-          </ul>
+        <ul class="pagination">
+  <li class="page-item active"><a class="page-link page-prev" href="#"></a></li>
+  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="#">4</a></li>
+  <li class="page-item"><a class="page-link" href="#">5</a></li>
+  <li class="page-item"><a class="page-link page-next" href="#"></a></li>
+</ul>
 
-          <div class="spoilers">
-            <div class="spoiler opened">
-  <button class="spoiler-title">Текст вопроса 1</button>
-  <div class="spoiler-content" style="display: block;">
-    <p><strong>Usage</strong> It is shown by default, until the collapse plugin adds the appropriate</p>
-    <code>.spoiler</code> - (parent)<br>
-    <code>.spoiler > .spoiler-title</code> - (childs) title<br>
-    <code>.spoiler > .spoiler-content</code> - (childs) any content with HTML tags
-  </div>
-</div><!-- /spoiler -->
-<div class="spoiler ">
-  <button class="spoiler-title">Текст вопроса 2</button>
-  <div class="spoiler-content" >
-    <p><strong>Usage</strong> It is shown by default, until the collapse plugin adds the appropriate</p>
-    <code>.spoiler</code> - (parent)<br>
-    <code>.spoiler > .spoiler-title</code> - (childs) title<br>
-    <code>.spoiler > .spoiler-content</code> - (childs) any content with HTML tags
-  </div>
-</div><!-- /spoiler -->
-<div class="spoiler ">
-  <button class="spoiler-title">Текст вопроса 3</button>
-  <div class="spoiler-content" >
-    <p><strong>Usage</strong> It is shown by default, until the collapse plugin adds the appropriate</p>
-    <code>.spoiler</code> - (parent)<br>
-    <code>.spoiler > .spoiler-title</code> - (childs) title<br>
-    <code>.spoiler > .spoiler-content</code> - (childs) any content with HTML tags
-  </div>
-</div><!-- /spoiler -->
-<div class="spoiler ">
-  <button class="spoiler-title">Текст вопроса 4</button>
-  <div class="spoiler-content" >
-    <p><strong>Usage</strong> It is shown by default, until the collapse plugin adds the appropriate</p>
-    <code>.spoiler</code> - (parent)<br>
-    <code>.spoiler > .spoiler-title</code> - (childs) title<br>
-    <code>.spoiler > .spoiler-content</code> - (childs) any content with HTML tags
-  </div>
-</div><!-- /spoiler -->
-<div class="spoiler ">
-  <button class="spoiler-title">Текст вопроса 5</button>
-  <div class="spoiler-content" >
-    <p><strong>Usage</strong> It is shown by default, until the collapse plugin adds the appropriate</p>
-    <code>.spoiler</code> - (parent)<br>
-    <code>.spoiler > .spoiler-title</code> - (childs) title<br>
-    <code>.spoiler > .spoiler-content</code> - (childs) any content with HTML tags
-  </div>
-</div><!-- /spoiler -->
+        <div class="notification_table">
+          <div class="notification_table_head">
+            <div class="row">
+              <div class="col-12 col-md-4">Текст уведомления</div>
+              <div class="col-12 col-md-5">Дополнительная информация</div>
+              <div class="col-12 col-md-3 text-right">дата, время</div>
+            </div>
+          </div><!-- /trow -->
 
-          </div>
-        </div><!-- /col -->
-      </div><!-- /row -->
+          <div class="notification_table_row">
+            <div class="row">
+              <div class="col-12 col-md-4">Релиз <b>Название релиза</b> не прошел модерацию</div>
+              <div class="col-12 col-md-5"><small>Причина отклонения:</small> Не указано наличие ненормативной лексики в одной из композиций, <a href="#">узнать подробности</a></div>
+              <div class="col-12 col-md-3 notification_table_date">13:07, 12.06.2021</div>
+            </div>
+          </div><!-- /trow -->
 
-    </div><!-- /wrapper -->
+          <div class="notification_table_row">
+            <div class="row">
+              <div class="col-12 col-md-4">Поступление средств с продаж</div>
+              <div class="col-12 col-md-5"><b>+ 2 000 руб.</b></div>
+              <div class="col-12 col-md-3 notification_table_date">13:07, 12.06.2021</div>
+            </div>
+          </div><!-- /trow -->
 
+          <div class="notification_table_row">
+            <div class="row">
+              <div class="col-12 col-md-4">Успешное списание средств за ежемесячное продвижение</div>
+              <div class="col-12 col-md-5"><b>- 3 000 руб.</b></div>
+              <div class="col-12 col-md-3 notification_table_date">13:07, 12.06.2021</div>
+            </div>
+          </div><!-- /trow -->      
+        </div><!-- /notification_table -->
+
+      </div><!-- /col-xxl-8 -->
+    </div><!-- /row -->
 
 	</div><!-- /mainwrap_content -->
 </div><!-- /mainwrap -->

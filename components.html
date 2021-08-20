@@ -7,19 +7,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="shortcut icon" href="images/favicon.ico">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"> -->
+	<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/style/jquery.jscrollpane.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	<link href="css/resp.css" rel="stylesheet" type="text/css">
 	<!--[if IE]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
 </head>
 
-<body>
+<body >
 
 
-<div class="navpanel">
+<div class="navpanel scroll-pane">
   <div class="navpanel_top">
     <div class="navpanel_logo">
       <a href="#"><img src="images/svg/logo.svg" alt=""></a>
@@ -27,9 +27,9 @@
     </div>
     <nav class="navpanel_menu">
       <ul>
-        <li class="navpanel_menu-dashboard"><a href="#">Дашборд</a></li>
-        <li class="navpanel_menu-load"><a href="#">Мои загрузки</a></li>
-        <li class="navpanel_menu-stat"><a href="#">Статистика</a></li>
+        <li class="navpanel_menu-dashboard"><a href="dashboard.html">Дашборд</a></li>
+        <li class="navpanel_menu-load"><a href="my-loads.html">Мои загрузки</a></li>
+        <li class="navpanel_menu-stat"><a href="stat.html">Статистика</a></li>
         <li class="navpanel_menu-base"><a href="#">музыкальные базы ретаргетинга</a></li>
         <li class="navpanel_menu-tools parent">
           <a href="#">Инструменты для продвижения</a>
@@ -42,7 +42,7 @@
         <li class="navpanel_menu-help parent">
           <a href="#">помощь</a>
           <ul>
-            <li><a href="#">Помощь и обратная связь</a></li>
+            <li><a href="feedback.html">Помощь и обратная связь</a></li>
             <li><a href="#">Услуги дизайнера</a></li>
             <li><a href="#">Продвижение релиза</a></li>
             <li><a href="#">Продвижение сообщества артиста</a></li>
@@ -72,16 +72,23 @@
     </div>
   </div>
 </div><!-- /navpanel -->
+<div class="navpanel_overlay"></div>
+<a href="#" class="navpanel_close"></a>
 
 
 <div class="mainwrap">
 	<header class="header">
-	<div class="header_title">Компоненты</div>
+	<div class="header_icons header_icons_first">
+		<div class="header_icon header_icon_nav">
+			<a href="#" class="header_btn header_nav js_header_nav"></a>
+		</div>
+		<div class="header_title">Компоненты</div>
+	</div>
 	<div class="header_icons">
-		<div class="header_icon">
+		<div class="header_icon hide_mobile">
 			<a href="#" class="header_btn header_balance">Баланс <b>1000</b></a>
 		</div>
-		<div class="header_icon">
+		<div class="header_icon js_header_icon hide_mobile">
 			<a href="#" class="header_btn header_notify">
 				<span class="header_notify_count">2</span>
 			</a>
@@ -99,14 +106,16 @@
 					<span class="notification_date">11:30, сегодня</span>
 				</li>
 				<li class="notification_item notification_more">
-					<a href="#" class="btn">Показать все уведомления</a>
+					<a href="notifications.html" class="btn">Показать все уведомления</a>
 				</li>
 			</ul>
 		</div>
-		<div class="header_icon">
+		<div class="header_icon js_header_icon">
 			<a href="#" class="header_btn header_user"></a>
 			<ul class="header_icon_popup profile_nav">
-				<li><a href="#">Личный кабинет</a></li>
+				<li><a href="auth.html">Личный кабинет</a></li>
+				<li class="show-mobile"><a href="#">Финасны</a></li>
+				<li class="show-mobile"><a href="notifications.html" class="profile_nav-flex">Уведомления <span class="profile_nav-count">5</span></a></li>
 				<li><a href="#">Выход</a></li>
 			</ul>
 		</div>
@@ -124,7 +133,6 @@
 		<button type="button" class="btn btn-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Чтобы у магазинов было">.btn-white</button>
 		<button type="button" class="btn btn-white" disabled>.btn-white (Disabled)</button>
 		<button type="button" class="btn btn-border" data-bs-toggle="tooltip" data-bs-placement="left" title="Чтобы у магазинов было">.btn-border</button>
-		<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modal</button>
 
 		<button type="button" class="btn btn-sm">.btn-sm</button>
 		<div class="clear"></div>
@@ -158,14 +166,14 @@
 			<div class="col-12 col-md-4">
 				<h4>Пагинация</h4>
 				<ul class="pagination">
-					<li class="page-item active"><a class="page-link page-prev" href="#"></a></li>
-					<li class="page-item active"><a class="page-link" href="#">1</a></li>
-					<li class="page-item"><a class="page-link" href="#">2</a></li>
-					<li class="page-item"><a class="page-link" href="#">3</a></li>
-					<li class="page-item"><a class="page-link" href="#">4</a></li>
-					<li class="page-item"><a class="page-link" href="#">5</a></li>
-					<li class="page-item"><a class="page-link page-next" href="#"></a></li>
-				</ul>
+  <li class="page-item active"><a class="page-link page-prev" href="#"></a></li>
+  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="#">4</a></li>
+  <li class="page-item"><a class="page-link" href="#">5</a></li>
+  <li class="page-item"><a class="page-link page-next" href="#"></a></li>
+</ul>
 			</div>
 			<div class="col-12 col-md-5">
 				<h4>Табы</h4>
@@ -183,7 +191,7 @@
 		<h2>Селекты, Чекбоксы и радиокнопки</h2>
 		<div class="row">
 			<div class="col-12 col-md-3">
-				<select class="js-example-basic-single" data-placeholder="Выберите из списка">
+				<select class="js_select" data-placeholder="Выберите из списка">
 					<option>Alabama</option>
 					<option>Alabama</option>
 					<option>Alabama</option>
@@ -315,9 +323,9 @@
 			<div class="col-12 col-md-6">
 				<h2>Smallcard (.smallcard)</h2>
 				<div class="smallcard">
-  <div class="smallcard_img">
-    <a href="#"><img src="images/svg/chess.svg" alt=""></a>
-  </div>
+  <a href="#" class="smallcard_img" style="background-image: url(images/svg/chess.svg);">
+    <!-- <a href="#"><img src="images/svg/chess.svg" alt=""></a> -->
+  </a>
   <div class="smallcard_entry">
     <div class="smallcard_top">
       <div class="smallcard_title">Заголовок новости</div>
@@ -368,41 +376,76 @@
 				<a href="#" class="loadbtn"><span>Название поля</span></a>
 
 				<div class="coverbox">
-					<img src="images/svg/chess.svg" alt="">
-					<div class="coverbox_icons">
-						<button class="edit_icon"></button>
-						<button class="delete_icon"></button>
-					</div>
-				</div><!-- /coverbox -->
-
-				<div class="addedfile">
-  <img src="images/svg/chess.svg" alt="" class="addedfile_img">
-  <div class="addedfile_title">Длинное-длинное название сингла</div>
   
   
-  
-  
-</div><!-- /addedfile -->
-
-				<div class="addedfile">
-  <img src="images/svg/chess.svg" alt="" class="addedfile_img">
-  <div class="addedfile_title">Длинное-длинное название сингла</div>
-  <div class="addedfile_done">Готово</div>
-  
-  
-  
-</div><!-- /addedfile -->
-
-				<div class="addedfile">
-  <img src="images/svg/chess.svg" alt="" class="addedfile_img">
-  <div class="addedfile_title">Длинное-длинное название сингла</div>
-  
-  <div class="addedfile_done active">Готово</div>
-  <div class="addedfile_text">Text</div>
-  <div class="addedfile_icons">
+  <img src="images/svg/chess.svg" alt="">
+  <div class="coverbox_icons">
     <button class="edit_icon"></button>
     <button class="delete_icon"></button>
   </div>
+  
+</div><!-- /coverbox -->
+
+				<div class="addedfile">
+  <div class="addedfile_inner">
+    <img src="images/svg/chess.svg" alt="" class="addedfile_img">
+    
+    <div class="addedfile_content">
+      <div class="addedfile_title">Длинное-длинное название сингла</div>
+      <div class="addedfile_col">
+        
+        
+        
+        <div></div>
+        
+      </div>
+    </div>
+  </div><!-- /addedfile_inner -->
+
+  
+</div><!-- /addedfile -->
+
+				<div class="addedfile">
+  <div class="addedfile_inner">
+    <img src="images/svg/chess.svg" alt="" class="addedfile_img">
+    
+    <div class="addedfile_content">
+      <div class="addedfile_title">Длинное-длинное название сингла</div>
+      <div class="addedfile_col">
+        <div class="addedfile_done">Готово</div>
+        
+        
+        <div></div>
+        
+      </div>
+    </div>
+  </div><!-- /addedfile_inner -->
+
+  
+</div><!-- /addedfile -->
+
+				<div class="addedfile">
+  <div class="addedfile_inner">
+    <img src="images/svg/chess.svg" alt="" class="addedfile_img">
+    
+    <div class="addedfile_content">
+      <div class="addedfile_title">Длинное-длинное название сингла</div>
+      <div class="addedfile_col">
+        
+        <div class="addedfile_done active">Готово</div>
+        
+        <div><div class="addedfile_text">Text</div></div>
+        
+        <div class="addedfile_icons">
+          <button class="edit_icon"></button>
+          <button class="delete_icon"></button>
+        </div>
+        
+      </div>
+    </div>
+  </div><!-- /addedfile_inner -->
+
+  
 </div><!-- /addedfile -->
 
 				
@@ -548,82 +591,6 @@
 </div><!-- /mainwrap -->
 
 
-<div class="modal fade" id="staticBackdrop" data-bs-keyboard="true" tabindex="-1">
-	<div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-			<div class="modal-header">
-				<div class="modal-title">Авторизация в сервисе</div>
-				<ul class="nav" role="tablist">
-					<li class="nav-item"><a class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-sms" role="tab" aria-controls="tab-sms" aria-selected="true" href="#">По SMS</a></li>
-					<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="pill" data-bs-target="#tab-pass" role="tab" aria-controls="tab-sms" aria-selected="false">По паролю</a></li>
-				</ul>
-			</div>
-
-			<form action="#" method="POST">
-				<div class="form-line">
-					<label class="form-label">Номер телефона</label>
-					<input type="email" class="form-control" placeholder="+7">
-				</div>
-				<div class="tab-content">
-					<div class="tab-pane fade show active" id="tab-sms" role="tabpanel"></div>
-					<div class="tab-pane fade" id="tab-pass" role="tabpanel">
-						<div class="form-line">
-							<label class="form-label">Пароль</label>
-							<div class="form-control-pass">
-								<input type="password" class="form-control" placeholder="Введите пароль, указанный при регистрации" autocomplete="false">
-								<button class="form-control-pass-btn" type="button"></button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="form-line first">
-					<button class="btn btn-block">Войти</button>
-					<button type="button" class="btn btn-white btn-block" data-bs-toggle="modal" data-bs-target="#createAcc" data-bs-dismiss="modal">Создать новый аккаунт</button>
-				</div>
-			</form>			
-			<div class="modal-footer">Нажимая Создать новый аккаунт, я соглашаюсь с <a href="#">публичной офертой</a> и условиями <a href="#">обработки персональных данных</a>.</div>
-    </div>
-  </div>
-</div><!-- /modal -->
-
-
-
-<div class="modal fade" id="createAcc" data-bs-keyboard="true" tabindex="-1">
-	<div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-			<div class="modal-header">
-				<div class="modal-title">Создание нового аккаунта</div>
-			</div>
-
-			<p>Указанный номер <b>+7912 345 94-00</b> не зарегистрирован в системе. Если вы просто ошиблись в написании, нажмите <a href="#">изменить</a>.<br>
-			Если номер верный, продолжите регистрацию нового аккаунта.</p>
-
-			<form action="#" method="POST">
-				<div class="form-line">
-					<label class="form-label">Пароль</label>
-					<div class="form-control-pass">
-						<input type="password" class="form-control" autocomplete="false">
-						<button class="form-control-pass-btn" type="button"></button>
-					</div>
-				</div>
-				<div class="form-line">
-					<label class="form-label">Повторите пароль</label>
-					<div class="form-control-pass">
-						<input type="password" class="form-control" autocomplete="false">
-						<button class="form-control-pass-btn" type="button"></button>
-					</div>
-				</div>
-				<div class="form-line first">
-					<button class="btn btn-block">Готово</button>
-				</div>
-				<div class="modal-footer">Нажимая <b>Готово</b>, я соглашаюсь с <a href="#">публичной офертой</a> и условиями <a href="#">обработки персональных данных</a>.</div>
-			</form>
-    </div>
-  </div>
-</div><!-- /modal -->
-
 
 <div class="modal fade" id="uploadDemo" data-bs-keyboard="true" tabindex="-1">
 	<div class="modal-dialog modal-dialog-centered">
@@ -692,16 +659,16 @@
 </div><!-- /modal -->
 
 
-
-
 <button type="button" class="btn btn-chat btn-chat-fixed"><span>Чат с поддержкой 24/7</span></button>
 
 
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script> -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/script/jquery.jscrollpane.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>
