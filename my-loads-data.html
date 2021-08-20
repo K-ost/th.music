@@ -82,7 +82,7 @@
 		<div class="header_icon header_icon_nav">
 			<a href="#" class="header_btn header_nav js_header_nav"></a>
 		</div>
-		<div class="header_title">Ввод данных</div>
+		
 	</div>
 	<div class="header_icons">
 		<div class="header_icon hide_mobile">
@@ -114,8 +114,8 @@
 			<a href="#" class="header_btn header_user"></a>
 			<ul class="header_icon_popup profile_nav">
 				<li><a href="auth.html">Личный кабинет</a></li>
-				<li class="show-mobile"><a href="#">Финасны</a></li>
-				<li class="show-mobile"><a href="notifications.html" class="profile_nav-flex">Уведомления <span class="profile_nav-count">5</span></a></li>
+				<li class="show_mobile"><a href="#">Финасны</a></li>
+				<li class="show_mobile"><a href="notifications.html" class="profile_nav-flex">Уведомления <span class="profile_nav-count">5</span></a></li>
 				<li><a href="#">Выход</a></li>
 			</ul>
 		</div>
@@ -126,7 +126,7 @@
 	<div class="mainwrap_content">
 
     <div class="row">
-			<div class="col-12 col-xxl-4 order-xxl-last">
+			<div class="col-12 col-xl-3 col-xxl-4 order-xl-last steps_column">
         <div class="steps_list">
   
   <div class="steps_list_item">
@@ -183,16 +183,16 @@
       </div><!-- /col -->
 
 
-      <div class="col-12 col-xxl-8 order-xxl-first">
+      <div class="col-12 col-xl-9 col-xxl-8 order-xl-first">
         <div class="wrapper">
 					<div class="wrapper_head">
-            <a href="my-loads.html" class="btn">Назад</a>
+            <a href="my-loads.html" class="btn hide_mobile">Назад</a>
             <div class="wrapper_head_info">
               <div class="wrapper_head_title"><small>Шаг 2</small> Ввод данных</div>
               <div class="light_text">Добавляйте целые альбомы или синглы.<br>
               К ним необходимо подобрать и загрузить обложку.</div>
             </div>
-					  <a href="#" class="btn">Далее</a>
+					  <a href="my-loads-promo.html" class="btn hide_mobile">Далее</a>
           </div><!-- /wrapper_head -->
 
           
@@ -202,10 +202,11 @@
               <div class="spoiler_min-content" style="display: block;">
                 <label class="form-label">Основной исполнитель*</label>
                 <div class="row">
-                  <div class="col-12 col-sm-6 col-xxl-4">
-                    <input type="text" class="form-control">
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <input type="text" class="form-control is-invalid">
+                    <div class="invalid-feedback">Error! This field shouldn't be empty</div>
                   </div>
-                  <div class="col-12 col-sm-6 col-xxl-4">
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
                     <button class="btn btn-border btn-add btn-block"><span>Добавить исполнителя</span></button>
                   </div>
                 </div>
@@ -216,7 +217,7 @@
               <div class="spoiler_min-title"><span>Жанры</span></div>
               <div class="spoiler_min-content" style="display: block;">
                 <div class="row">
-                  <div class="col-12 col-sm-6 col-xxl-4">
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
                     <label class="form-label">Основной жанр*</label>
                     <select class="js_select" data-placeholder="Выберите из списка">
                       <option>Alabama</option>
@@ -228,7 +229,7 @@
                       <option>Wyoming</option>
                     </select>
                   </div>
-                  <div class="col-12 col-sm-6 col-xxl-4">
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
                     <label class="form-label">Дополнительный жанр</label>
                     <select class="js_select" data-placeholder="Выберите из списка">
                       <option>Alabama</option>
@@ -248,7 +249,7 @@
               <div class="spoiler_min-title"><span>Язык и языковые особенности</span></div>
               <div class="spoiler_min-content" style="display: block;">
                 <div class="row">
-                  <div class="col-12 col-sm-6 col-xxl-4">
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
                     <label class="form-label">Язык релиза*</label>
                     <select class="js_select" data-placeholder="Выберите из списка">
                       <option>Alabama</option>
@@ -260,7 +261,7 @@
                       <option>Wyoming</option>
                     </select>
                   </div>
-                  <div class="col-12 col-sm-6 col-xxl-4">
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
                     <label class="form-label">Язык метаданных</label>
                     <select class="js_select" data-placeholder="Выберите из списка">
                       <option>Alabama</option>
@@ -279,13 +280,13 @@
             <div class="spoiler_min opened">
               <div class="spoiler_min-title"><span>Добавляйте целые альбомы или синглы. К ним необходимо подобрать и загрузить обложку.</span></div>
               <div class="spoiler_min-content" style="display: block;">
-                <div class="form-line">
+                <div>
                   <label class="form-label">Основной исполнитель*</label>
                   <div class="row valign-center">
-                    <div class="col-12 col-sm-6 col-xxl-4">
+                    <div class="col-12 col-sm-6 col-xxl-4 form-line">
                       <input type="text" class="form-control">
                     </div>
-                    <div class="col-12 col-sm-6 col-xxl-4">
+                    <div class="col-12 col-sm-6 col-xxl-4 form-line">
                       <label class="form-check"><input type="checkbox"> Свой копирайт</label>
                     </div>
                   </div>
@@ -311,6 +312,12 @@
 
 	</div><!-- /mainwrap_content -->
 </div><!-- /mainwrap -->
+
+
+<div class="steps_fix_footer">
+	<a href="my-loads.html" class="btn btn-white">Назад</a>
+	<a href="my-loads-promo.html" class="btn">Далее</a>
+</div><!-- /steps_fix_footer -->
 
 
 

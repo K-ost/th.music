@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Статистика</title>
+	<title>Промо | Мои загрузки</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -82,7 +82,7 @@
 		<div class="header_icon header_icon_nav">
 			<a href="#" class="header_btn header_nav js_header_nav"></a>
 		</div>
-		<div class="header_title">Статистика</div>
+		
 	</div>
 	<div class="header_icons">
 		<div class="header_icon hide_mobile">
@@ -125,197 +125,129 @@
 
 	<div class="mainwrap_content">
 
-    <div class="row row_with_charts">
-      <div class="col-12 col-xxl-7">
-        <div class="wrapper wrapper-hidden">
-          <h2>Количество прослушиваний</h2>
-          <div class="swiper-container num_plays">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#" class="btn-chart btn-chart-green">
-  <span class="btn-chart-title">все прослушивания</span>
-  <span class="btn-chart-count">8 653 987</span>
-</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="btn-chart btn-chart-red">
-  <span class="btn-chart-title">платные прослушивания</span>
-  <span class="btn-chart-count">8 653 987</span>
-</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="btn-chart disabled">
-  <span class="btn-chart-title">ВКонтакте</span>
-  <span class="btn-chart-count">8 653 987</span>
-</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="btn-chart disabled">
-  <span class="btn-chart-title">Яндекс.Музыка</span>
-  <span class="btn-chart-count">8 653 987</span>
-</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="btn-chart disabled">
-  <span class="btn-chart-title">Spotify</span>
-  <span class="btn-chart-count">8 653 987</span>
-</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="btn-chart disabled">
-  <span class="btn-chart-title">Apple Music</span>
-  <span class="btn-chart-count">8 653 987</span>
-</a>
-              </div>
-            </div>
-          </div><!-- /swiper-container -->
-          <hr>
-          <div class="pagehead">
-            <h2>График</h2>
-            <ul class="nav">
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Прослушиваний</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">По площадкам</a></li>
-            </ul>
-          </div>
-          <div>
-            <canvas id="myChart"></canvas>
-          </div>
-        </div><!-- /wrapper -->
-      </div>
-      <div class="col-12 col-xxl-5">
-        <div class="wrapper">
-          <h2>Прослушивания по странам</h2>
-          <div>
-            <canvas id="bar-countries"></canvas>
-          </div>
-        </div><!-- /wrapper -->
-      </div>
-    </div><!-- /row -->
-
     <div class="row">
-      <div class="col-12 col-xxl-6">
-        <div class="wrapper">
-          <h2>Демография</h2>
-          <div>
-            <canvas id="bar-demography"></canvas>
-          </div>
-        </div><!-- /wrapper -->
-
-        <div class="wrapper">
-          <h2>Типы устройств</h2>
-          <div>
-            <canvas id="pie-devices" style="max-height: 340px;"></canvas>
-          </div>
-        </div><!-- /wrapper -->
+			<div class="col-12 col-xl-3 col-xxl-4 order-xl-last steps_column">
+        <div class="steps_list">
+  
+  <div class="steps_list_item">
+    <label>
+      <input type="radio" name="flexRadioDefault" undefined>
+      <div class="steps_list_body">
+        <div class="steps_list_title"><b>Шаг 1</b> Работа с файлами</div>
+        <div class="steps_list_percent">0%</div>
       </div>
-      <div class="col-12 col-xxl-6 chart_columns">
-        <div class="wrapper">
-          <h2>Платформы</h2>
-          <div>
-            <div class="progress">
-  <div class="progress_title">ВКонтакте</div>
-  <div class="progress_line">
-    <div class="progress_range" style="width: 77%;"></div>
+    </label>
   </div>
-  <div class="progress_val">77%</div>
-  <div class="progress_count">4 653 987</div>
-</div><!-- /progress --><div class="progress">
-  <div class="progress_title">Яндекс.Музыка</div>
-  <div class="progress_line">
-    <div class="progress_range" style="width: 11%;"></div>
-  </div>
-  <div class="progress_val">11%</div>
-  <div class="progress_count">653 987</div>
-</div><!-- /progress --><div class="progress">
-  <div class="progress_title">Spotify</div>
-  <div class="progress_line">
-    <div class="progress_range" style="width: 11%;"></div>
-  </div>
-  <div class="progress_val">11%</div>
-  <div class="progress_count">653 987</div>
-</div><!-- /progress --><div class="progress">
-  <div class="progress_title">Одноклассники</div>
-  <div class="progress_line">
-    <div class="progress_range" style="width: 2%;"></div>
-  </div>
-  <div class="progress_val">2%</div>
-  <div class="progress_count">63 987</div>
-</div><!-- /progress --><div class="progress">
-  <div class="progress_title">Deezer</div>
-  <div class="progress_line">
-    <div class="progress_range" style="width: 1%;"></div>
-  </div>
-  <div class="progress_val">1%</div>
-  <div class="progress_count">20 925</div>
-</div><!-- /progress --><div class="progress">
-  <div class="progress_title">Apple Music</div>
-  <div class="progress_line">
-    <div class="progress_range" style="width: 0%;"></div>
-  </div>
-  <div class="progress_val">0%</div>
-  <div class="progress_count">9 674</div>
-</div><!-- /progress -->
-          </div>
-        </div><!-- /wrapper -->
-
-        <div class="wrapper wrapper-shrink">
-          <h2>Операционные системы</h2>
-          <div>
-            <canvas id="pie-os" style="max-height: 340px;"></canvas>
-          </div>
-          <!-- <div class="pie_container">
-            <ul class="pie_legend ">
   
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-green"></div>
-    <div class="pie_legend_title">Android <b>50%</b> <small>2 500</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-red"></div>
-    <div class="pie_legend_title">Веб-браузер <b>30%</b> <small>1 500</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-yellow"></div>
-    <div class="pie_legend_title">iOS <b>10%</b> <small>243</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color undefined"></div>
-    <div class="pie_legend_title">Остальные <b>6%</b> <small>60</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-lightgreen"></div>
-    <div class="pie_legend_title">Windows <b>2%</b> <small>60</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-lightred"></div>
-    <div class="pie_legend_title">Linux <b>1%</b> <small>60</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-lightyel"></div>
-    <div class="pie_legend_title">MacOS <b>1%</b> <small>60</small></div>
-  </li>
-  
-</ul>
-          </div> -->
-        </div><!-- /wrapper -->
+  <div class="steps_list_item">
+    <label>
+      <input type="radio" name="flexRadioDefault" undefined>
+      <div class="steps_list_body">
+        <div class="steps_list_title"><b>Шаг 2</b> Ввод данных</div>
+        <div class="steps_list_percent"></div>
       </div>
+    </label>
+  </div>
+  
+  <div class="steps_list_item">
+    <label>
+      <input type="radio" name="flexRadioDefault" checked>
+      <div class="steps_list_body">
+        <div class="steps_list_title"><b>Шаг 3</b> Промо</div>
+        <div class="steps_list_percent"></div>
+      </div>
+    </label>
+  </div>
+  
+  <div class="steps_list_item">
+    <label>
+      <input type="radio" name="flexRadioDefault" undefined>
+      <div class="steps_list_body">
+        <div class="steps_list_title"><b>Шаг 4</b> Выбор площадок и дат релиза</div>
+        <div class="steps_list_percent"></div>
+      </div>
+    </label>
+  </div>
+  
+  <div class="steps_list_item">
+    <label>
+      <input type="radio" name="flexRadioDefault" undefined>
+      <div class="steps_list_body">
+        <div class="steps_list_title"><b>Шаг 5</b> Проверка данных</div>
+        <div class="steps_list_percent">100%</div>
+      </div>
+    </label>
+  </div>
+  
+</div><!-- /steps_list -->
+      </div><!-- /col -->
+
+
+      <div class="col-12 col-xl-9 col-xxl-8 order-xl-first">
+        <div class="wrapper">
+					<div class="wrapper_head">
+            <a href="my-loads-data.html" class="btn hide_mobile">Назад</a>
+            <div class="wrapper_head_info">
+              <div class="wrapper_head_title"><small>Шаг 3</small> Промо</div>
+              <div class="light_text">Подробное и граммотное описание релиза поможет продвинуть треки и альбомы.<br> Важно: Решение о размещении информации остается за самими площадками.</div>
+            </div>
+					  <a href="my-loads-release.html" class="btn hide_mobile">Далее</a>
+          </div><!-- /wrapper_head -->
+
+          <div class="article">
+            <div class="row">
+              <div class="col-12 col-xl-6 article_grid_flex">
+                <p>Описание релиза</p>
+                <div class="article_image_box"></div>
+              </div>
+              <div class="col-12 col-xl-6">
+                <p><b>Что важно указать в описании?</b></p>
+                <p>1.Название альбома/сингла/EP</p>
+                <p>2. Жанры (направления) записи<br> <span class="light_text">Например: синти-поп, электрофанк, гэридж, глэм-рок, дансхолл, тропикал-хаус, хеви-метал, индастриал, джаз, трип-хоп и т.д.</span></p>
+                <p>3. Настроение записи<br> <span class="light_text">Например: гипнотические биты; чувственный танцевальный альбом; эстетика 60-х; олдскульный хип-хоп; коллекция иронично-острых треков и т.д.</span></p>
+                <p>4. Концепцию записи (идею, главную задумку)<br> <span class="light_text">Например: история обреченных отношений; социально-политические гимны; рэп-манифест и т.д.</span></p>
+                <p>5. Приглашенные артисты и продюсеры с примерами песен, в записи которых они участвовали</p>
+                <p>6. Источники вдохновения: артисты, альбомы, фильмы, страны и т.п.</p>
+                <p><b>Пример отличного описания:</b></p>
+                <p>«Сингл ХХХ с нового альбома группы YYY - это острая и горькая ирония над тем, что происходит вокруг, в музыкальной смеси
+                  новой школы хип-хопа и поп-музыки. Трек, вдохновленный путешествием к Атлантическому океану, будет представлен в эфире шоу «Вечерний Ургант», а большое интервью с артистом будет опубликовано в тот же день на Афиша Daily.»</p>
+                <p><b>Что указать в этом поле?</b></p>
+                <p>1.Известные личности, готовые поддержать выход релиза (артисты, блоггеры, медийные личности)</p>
+                <p>2. Будет ли запущен челлендж</p>
+              </div>
+            </div><!-- /row -->
+            <div class="row">
+              <div class="col-12 col-xl-6 article_grid_flex">
+                <p>Поддержка в соцсетях</p>
+                <div class="article_image_box"></div>
+              </div>
+              <div class="col-12 col-xl-6">
+                <p>1.Известные личности, готовые поддержать выход релиза (артисты, блоггеры, медийные личности)</p>
+                <p>2. Будет ли запущен челлендж</p>
+              </div>
+            </div><!-- /row -->
+            <div class="row">
+              <div class="col-12 col-xl-6 article_grid_flex">
+                <p>Информация для модератора</p>
+                <div class="article_image_box"></div>
+              </div>
+            </div><!-- /row -->
+          </div><!-- /article -->
+
+        </div><!-- /wrapper -->
+      </div><!-- /col -->
     </div><!-- /row -->
+
 
 	</div><!-- /mainwrap_content -->
 </div><!-- /mainwrap -->
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="js/charts/line.js"></script>
-<script src="js/charts/bar.js"></script>
-<script src="js/charts/bar2.js"></script>
-<script src="js/charts/pie.js"></script>
-<script src="js/charts/pie-os.js"></script>
+
+<div class="steps_fix_footer">
+	<a href="my-loads-data.html" class="btn btn-white">Назад</a>
+	<a href="my-loads-release.html" class="btn">Далее</a>
+</div><!-- /steps_fix_footer -->
+
 
 
 <div class="modal fade" id="uploadDemo" data-bs-keyboard="true" tabindex="-1">

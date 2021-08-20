@@ -1,22 +1,5 @@
 @media screen and (max-width: 1399px) {
-  /* steps_list */
-  .steps_list {
-    display: flex; }
-  .steps_list::before {
-    width: auto;
-    height: 1px;
-    left: 11px;
-    top: 17px;
-    bottom: auto;
-    right: calc(20% - 20px); }
-  .steps_list_item {
-    padding: 40px 0 0;
-    margin: 0 20px 0 0;
-    width: 100%; }
-  .steps_list_item:last-child {
-    margin: 0; }
-  .steps_list_percent {
-    display: none; }
+  /* notification */
   .notification_header {
     display: block; }
   .notification_header .nav {
@@ -30,7 +13,12 @@
     margin: 0 0 16px; } }
 
 /* Medium */
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1199px) {
+  /* steps_list */
+  .steps_column {
+    display: none; } }
+
+@media screen and (max-width: 998px) {
   body {
     padding-left: 0; }
   .navpanel {
@@ -84,6 +72,29 @@
     margin-bottom: 8px; }
     .notification_table_row [class*="col-"]:last-child {
       margin-bottom: 0; }
+  .btn-chat-fixed {
+    bottom: 54px;
+    right: 16px; }
+  /* modal */
+  .modal-dialog, .modal_large .modal-dialog {
+    max-width: none;
+    width: auto; }
+  .modal-content {
+    padding: 56px 24px 24px !important;
+    font-size: 12px;
+    line-height: 17px; }
+  .modal-title {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 0 8px; }
+  .modal-header {
+    margin: 0 0 16px !important; }
+  .modal .infobox_grid {
+    margin-bottom: 16px; }
+  .modal .infobox_grid:last-child {
+    margin-bottom: 0; }
+  .modal-content .loadbtn {
+    margin-bottom: 16px; }
   /* auth_container */
   .auth_container {
     display: block;
@@ -125,6 +136,50 @@
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      overflow: hidden; } }
+      overflow: hidden; }
+  /* loadbtn */
+  .loadbtn {
+    min-height: 82px;
+    font-size: 12px;
+    line-height: 14px; }
+  .loadbtn::before {
+    width: 28px;
+    height: 26px;
+    margin-bottom: 9px; }
+  .loadbtn-small {
+    min-height: 0; }
+  /* wrapper_head */
+  .wrapper_head {
+    display: block;
+    margin: 0 0 24px; }
+  .wrapper_head_title {
+    font-size: 16px;
+    line-height: 18px; }
+  .wrapper_head .light_text {
+    font-size: 12px;
+    line-height: 17px; }
+  .steps_fix_footer {
+    display: flex; }
+  /* addedfile */
+  .addedfile_inner {
+    height: auto;
+    align-items: normal;
+    padding: 0; }
+  .addedfile_hide {
+    display: none;
+    padding: 16px; }
+  .addedfile_content {
+    display: block;
+    padding: 12px 16px; }
+  .addedfile_title {
+    margin-bottom: 8px; }
+  .addedfile_col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+  .addedfile_drag {
+    min-height: auto;
+    height: auto;
+    display: block; } }
 
 /* Mobile */
