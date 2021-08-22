@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Статистика</title>
+	<title>Финансы</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -84,7 +84,7 @@
 		<div class="header_icon header_icon_nav">
 			<a href="#" class="header_btn header_nav js_header_nav"></a>
 		</div>
-		<div class="header_title">Статистика</div>
+		<div class="header_title">Финансы</div>
 	</div>
 	<div class="header_icons">
 		<div class="header_icon hide_mobile">
@@ -127,198 +127,317 @@
 
 	<div class="mainwrap_content">
 
-    <div class="row row_with_charts">
-      <div class="col-12 col-xxl-7">
+    <div class="row">
+      <div class="col-12 col-xl-5">
+        <div class="wrapper">
+          <div class="finance_header">
+            <div class="finance_header_col">
+              <h2>Действия со счетом</h2>
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true" href="#">Вывести средства</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Пополнить баланс</a></li>
+              </ul>
+            </div><!-- /finance_header_col -->
+            <div class="balance-widjet">
+              <div class="balance-widjet-title">Баланс</div>
+              <div class="balance-widjet-price">10 000 <ins>₽</ins></div>
+            </div>
+          </div><!-- /finance_header -->
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
+              <div class="form-line last">
+                <label class="form-label">Сумма вывода</label>
+                <input type="text" class="form-control" placeholder="Сумма (руб.), например: 1000">
+              </div>
+              <div class="form-line no_margin text-right">
+                <button type="button" class="btn">Вывести на расчетный счет</button>
+              </div>
+            </div><!-- /tab-pane -->
+
+            <div class="tab-pane fade" id="tab-2" role="tabpanel">
+              <div class="row">
+                <div class="col-12 col-md-6 form-line last">
+                  <label class="form-label">Сумма пополения</label>
+                  <input type="text" class="form-control" placeholder="Сумма (руб.), например: 1000">
+                </div>
+                <div class="col-12 col-md-6 form-line last">
+                  <label class="form-label">Способ пополнения</label>
+                  <select class="js_select" data-placeholder="Выберите из списка">
+                    <option>Банковская карта</option>
+                    <option>Юмани</option>
+                    <option>Сбербанк</option>
+                    <option>Webmoney</option>
+                    <option>Paypal</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-line no_margin text-right">
+                <button type="button" class="btn">Пополнить</button>
+              </div>
+            </div><!-- /tab-pane -->
+          </div><!-- /tab-content -->
+
+        </div><!-- /wrapper -->
+
+        <div class="wrapper">
+          <h2>История движений средств</h2>
+
+          <div class="history_funds">
+            <div class="history_funds_head">
+              <div class="row">
+                <div class="col-4">сумма, руб</div>
+                <div class="col-4">комментарий</div>
+                <div class="col-4">дата, время</div>
+              </div>
+            </div><!-- /row -->
+            <div class="history_funds_row">
+              <div class="row">
+                <div class="col-12 col-sm-4 color-green">+ 2 000</div>
+                <div class="col-6 col-sm-4">Пополнение с карты</div>
+                <div class="col-6 col-sm-4">13:07, 12.06.2021</div>
+              </div>
+            </div><!-- /row -->
+            <div class="history_funds_row">
+              <div class="row">
+                <div class="col-12 col-sm-4 color-red">- 3 000</div>
+                <div class="col-6 col-sm-4">Вывод на расчетный счет</div>
+                <div class="col-6 col-sm-4">23:20, 10.06.2021</div>
+              </div>
+            </div><!-- /row -->
+            <div class="history_funds_row">
+              <div class="row">
+                <div class="col-12 col-sm-4 color-green">+ 2 000</div>
+                <div class="col-6 col-sm-4">Пополнение с карты</div>
+                <div class="col-6 col-sm-4">13:07, 12.06.2021</div>
+              </div>
+            </div><!-- /row -->
+            <div class="history_funds_row">
+              <div class="row">
+                <div class="col-12 col-sm-4 color-red">- 3 000</div>
+                <div class="col-6 col-sm-4">Вывод на расчетный счет</div>
+                <div class="col-6 col-sm-4">23:20, 10.06.2021</div>
+              </div>
+            </div><!-- /row -->
+            <div class="history_funds_row">
+              <div class="row">
+                <div class="col-12 col-sm-4 color-green">+ 2 000</div>
+                <div class="col-6 col-sm-4">Пополнение с карты</div>
+                <div class="col-6 col-sm-4">13:07, 12.06.2021</div>
+              </div>
+            </div><!-- /row -->
+          </div><!-- /history_funds -->
+          
+        </div><!-- /wrapper -->
+      </div><!-- /col -->
+
+
+      <div class="col-12 col-xl-7">
         <div class="wrapper wrapper-hidden">
-          <h2>Количество прослушиваний</h2>
+          <h2>Статистика по заработанному</h2>
           <div class="swiper-container num_plays">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <a href="#" class="btn-chart btn-chart-green">
-  <span class="btn-chart-title">все прослушивания</span>
-  <span class="btn-chart-count">8 653 987</span>
+                <a href="#" class="btn-chart">
+  <span class="btn-chart-title">за все время</span>
+  <span class="btn-chart-count">207 894 ₽</span>
 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="btn-chart btn-chart-red">
-  <span class="btn-chart-title">платные прослушивания</span>
-  <span class="btn-chart-count">8 653 987</span>
+                <a href="#" class="btn-chart">
+  <span class="btn-chart-title">в этом месяце</span>
+  <span class="btn-chart-count">10 076 ₽</span>
 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="btn-chart disabled">
-  <span class="btn-chart-title">ВКонтакте</span>
-  <span class="btn-chart-count">8 653 987</span>
+                <a href="#" class="btn-chart">
+  <span class="btn-chart-title">на этой неделе</span>
+  <span class="btn-chart-count">3 994 ₽</span>
 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="btn-chart disabled">
-  <span class="btn-chart-title">Яндекс.Музыка</span>
-  <span class="btn-chart-count">8 653 987</span>
-</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="btn-chart disabled">
-  <span class="btn-chart-title">Spotify</span>
-  <span class="btn-chart-count">8 653 987</span>
-</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="btn-chart disabled">
-  <span class="btn-chart-title">Apple Music</span>
-  <span class="btn-chart-count">8 653 987</span>
+                <a href="#" class="btn-chart">
+  <span class="btn-chart-title">сегодня</span>
+  <span class="btn-chart-count">1 065 ₽</span>
 </a>
               </div>
             </div>
-          </div><!-- /swiper-container -->
+          </div><!-- /num_plays -->
           <hr>
           <div class="pagehead">
-            <h2>График</h2>
+            <h2>График заработанного</h2>
             <ul class="nav">
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Прослушиваний</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">По площадкам</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#">По месяцам</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">По месяцам</a></li>
             </ul>
           </div>
           <div>
             <canvas id="myChart"></canvas>
           </div>
-        </div><!-- /wrapper -->
-      </div>
-      <div class="col-12 col-xxl-5">
-        <div class="wrapper">
-          <h2>Прослушивания по странам</h2>
-          <div>
-            <canvas id="bar-countries"></canvas>
-          </div>
-        </div><!-- /wrapper -->
-      </div>
-    </div><!-- /row -->
-
-    <div class="row">
-      <div class="col-12 col-xxl-6">
-        <div class="wrapper">
-          <h2>Демография</h2>
-          <div>
-            <canvas id="bar-demography"></canvas>
-          </div>
-        </div><!-- /wrapper -->
-
-        <div class="wrapper">
-          <h2>Типы устройств</h2>
-          <div>
-            <canvas id="pie-devices" style="max-height: 340px;"></canvas>
-          </div>
-        </div><!-- /wrapper -->
-      </div>
-      <div class="col-12 col-xxl-6 chart_columns">
-        <div class="wrapper">
+          <hr>
           <h2>Платформы</h2>
-          <div>
-            <div class="progress">
+          <div class="progress">
   <div class="progress_title">ВКонтакте</div>
   <div class="progress_line">
     <div class="progress_range" style="width: 77%;"></div>
   </div>
   <div class="progress_val">77%</div>
-  <div class="progress_count">4 653 987</div>
+  <div class="progress_count">4 653 987 ₽</div>
 </div><!-- /progress --><div class="progress">
   <div class="progress_title">Яндекс.Музыка</div>
   <div class="progress_line">
     <div class="progress_range" style="width: 11%;"></div>
   </div>
   <div class="progress_val">11%</div>
-  <div class="progress_count">653 987</div>
+  <div class="progress_count">653 987 ₽</div>
 </div><!-- /progress --><div class="progress">
   <div class="progress_title">Spotify</div>
   <div class="progress_line">
     <div class="progress_range" style="width: 11%;"></div>
   </div>
   <div class="progress_val">11%</div>
-  <div class="progress_count">653 987</div>
+  <div class="progress_count">653 987 ₽</div>
 </div><!-- /progress --><div class="progress">
   <div class="progress_title">Одноклассники</div>
   <div class="progress_line">
     <div class="progress_range" style="width: 2%;"></div>
   </div>
   <div class="progress_val">2%</div>
-  <div class="progress_count">63 987</div>
+  <div class="progress_count">63 987 ₽</div>
 </div><!-- /progress --><div class="progress">
   <div class="progress_title">Deezer</div>
   <div class="progress_line">
     <div class="progress_range" style="width: 1%;"></div>
   </div>
   <div class="progress_val">1%</div>
-  <div class="progress_count">20 925</div>
+  <div class="progress_count">20 925 ₽</div>
 </div><!-- /progress --><div class="progress">
   <div class="progress_title">Apple Music</div>
   <div class="progress_line">
     <div class="progress_range" style="width: 0%;"></div>
   </div>
   <div class="progress_val">0%</div>
-  <div class="progress_count">9 674</div>
+  <div class="progress_count">9 674 ₽</div>
 </div><!-- /progress -->
-          </div>
-        </div><!-- /wrapper -->
+          <hr>
 
-        <div class="wrapper wrapper-shrink">
-          <h2>Операционные системы</h2>
-          <div>
-            <canvas id="pie-os" style="max-height: 340px;"></canvas>
-          </div>
-          <!-- <div class="pie_container">
-            <ul class="pie_legend ">
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-green"></div>
-    <div class="pie_legend_title">Android <b>50%</b> <small>2 500</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-red"></div>
-    <div class="pie_legend_title">Веб-браузер <b>30%</b> <small>1 500</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-yellow"></div>
-    <div class="pie_legend_title">iOS <b>10%</b> <small>243</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color undefined"></div>
-    <div class="pie_legend_title">Остальные <b>6%</b> <small>60</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-lightgreen"></div>
-    <div class="pie_legend_title">Windows <b>2%</b> <small>60</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-lightred"></div>
-    <div class="pie_legend_title">Linux <b>1%</b> <small>60</small></div>
-  </li>
-  
-  <li class="pie_legend_item">
-    <div class="pie_legend_color pie_legend_color-lightyel"></div>
-    <div class="pie_legend_title">MacOS <b>1%</b> <small>60</small></div>
-  </li>
-  
-</ul>
-          </div> -->
+          <h2>Топ-10 самых продаваемых</h2>
+          <div class="history_funds">
+            <div class="history_funds_head nobg">
+              <div class="row">
+                <div class="col-3">Название композиции</div>
+                <div class="col-3">Исполнитель</div>
+                <div class="col-3">Название альбома</div>
+                <div class="col-3">Заработано, руб</div>
+              </div>
+            </div><!-- /row -->
+            <div class="history_funds_row">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-3 history_funds_title">
+      <div class="history_funds_name">Название композиции</div>
+      <b>Bohemian Rhapsody</b>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="history_funds_name">Исполнитель</div>
+      Queen
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 history_funds_title">
+      <div class="history_funds_name">Название альбома</div>
+      A Night at the Opera
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="history_funds_name">Заработано, руб</div>
+      <b>96 753</b>
+    </div>
+  </div>
+</div><!-- /row --><div class="history_funds_row">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-3 history_funds_title">
+      <div class="history_funds_name">Название композиции</div>
+      <b>Master of Puppets</b>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="history_funds_name">Исполнитель</div>
+      Metallica
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 history_funds_title">
+      <div class="history_funds_name">Название альбома</div>
+      Master of Puppets
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="history_funds_name">Заработано, руб</div>
+      <b>96 753</b>
+    </div>
+  </div>
+</div><!-- /row --><div class="history_funds_row">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-3 history_funds_title">
+      <div class="history_funds_name">Название композиции</div>
+      <b>Cowboys from Hell</b>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="history_funds_name">Исполнитель</div>
+      Pantera
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 history_funds_title">
+      <div class="history_funds_name">Название альбома</div>
+      Cowboys from Hell
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="history_funds_name">Заработано, руб</div>
+      <b>96 753</b>
+    </div>
+  </div>
+</div><!-- /row --><div class="history_funds_row">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-3 history_funds_title">
+      <div class="history_funds_name">Название композиции</div>
+      <b>Wind of Change</b>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="history_funds_name">Исполнитель</div>
+      Scorpions
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 history_funds_title">
+      <div class="history_funds_name">Название альбома</div>
+      Crazy World
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="history_funds_name">Заработано, руб</div>
+      <b>96 753</b>
+    </div>
+  </div>
+</div><!-- /row --><div class="history_funds_row">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-3 history_funds_title">
+      <div class="history_funds_name">Название композиции</div>
+      <b>Davidian</b>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="history_funds_name">Исполнитель</div>
+      Machine Head
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 history_funds_title">
+      <div class="history_funds_name">Название альбома</div>
+      Burn My Eyes
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="history_funds_name">Заработано, руб</div>
+      <b>96 753</b>
+    </div>
+  </div>
+</div><!-- /row -->
+          </div><!-- /history_funds -->
+
         </div><!-- /wrapper -->
-      </div>
+      </div><!-- /col -->
     </div><!-- /row -->
 
 	</div><!-- /mainwrap_content -->
 </div><!-- /mainwrap -->
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="js/charts/line.js"></script>
-<script src="js/charts/bar.js"></script>
-<script src="js/charts/bar2.js"></script>
-<script src="js/charts/pie.js"></script>
-<script src="js/charts/pie-os.js"></script>
-
+<script src="js/charts/line-finance.js"></script>
 
 <div class="modal fade" id="uploadDemo" data-bs-keyboard="true" tabindex="-1">
 	<div class="modal-dialog modal-dialog-centered">

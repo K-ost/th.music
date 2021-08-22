@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Уведомления</title>
+	<title>Ввод данных | Выбор площадок и дат релиза</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -84,7 +84,7 @@
 		<div class="header_icon header_icon_nav">
 			<a href="#" class="header_btn header_nav js_header_nav"></a>
 		</div>
-		<div class="header_title">Уведомления</div>
+		
 	</div>
 	<div class="header_icons">
 		<div class="header_icon hide_mobile">
@@ -125,74 +125,138 @@
 </header><!-- /header -->
 
 
-	<div class="mainwrap_content">
+	<div class="mainwrap_content mainwrap_content-pb">
 
     <div class="row">
-      <div class="col-12">
+			<div class="col-12 col-xl-3 col-xxl-4 order-xl-last steps_column">
+        <div class="steps_list">
+  
+  <div class="steps_list_item">
+    <label>
+      <input type="radio" name="flexRadioDefault" undefined>
+      <div class="steps_list_body">
+        <div class="steps_list_title"><b>Шаг 1</b> Работа с файлами</div>
+        <div class="steps_list_percent">0%</div>
+      </div>
+    </label>
+  </div>
+  
+  <div class="steps_list_item">
+    <label>
+      <input type="radio" name="flexRadioDefault" undefined>
+      <div class="steps_list_body">
+        <div class="steps_list_title"><b>Шаг 2</b> Ввод данных</div>
+        <div class="steps_list_percent"></div>
+      </div>
+    </label>
+  </div>
+  
+  <div class="steps_list_item">
+    <label>
+      <input type="radio" name="flexRadioDefault" undefined>
+      <div class="steps_list_body">
+        <div class="steps_list_title"><b>Шаг 3</b> Промо</div>
+        <div class="steps_list_percent"></div>
+      </div>
+    </label>
+  </div>
+  
+  <div class="steps_list_item">
+    <label>
+      <input type="radio" name="flexRadioDefault" checked>
+      <div class="steps_list_body">
+        <div class="steps_list_title"><b>Шаг 4</b> Выбор площадок и дат релиза</div>
+        <div class="steps_list_percent"></div>
+      </div>
+    </label>
+  </div>
+  
+  <div class="steps_list_item">
+    <label>
+      <input type="radio" name="flexRadioDefault" undefined>
+      <div class="steps_list_body">
+        <div class="steps_list_title"><b>Шаг 5</b> Проверка данных</div>
+        <div class="steps_list_percent">100%</div>
+      </div>
+    </label>
+  </div>
+  
+</div><!-- /steps_list -->
+      </div><!-- /col -->
 
-        <div class="notification_header">
-          <ul class="nav">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Все</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Результаты модерации</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Финансы</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Изменения в сервисе</a></li>
-          </ul>
-          <div class="search">
-  <input type="text" class="form-control" placeholder="Поиск по уведомлениям">
-  <button type="button" class="search-button"></button>
-</div><!-- /search -->
-        </div><!-- /notification_header -->
 
-        <ul class="pagination">
-  <li class="page-item active"><a class="page-link page-prev" href="#"></a></li>
-  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-  <li class="page-item"><a class="page-link" href="#">2</a></li>
-  <li class="page-item"><a class="page-link" href="#">3</a></li>
-  <li class="page-item"><a class="page-link" href="#">4</a></li>
-  <li class="page-item"><a class="page-link" href="#">5</a></li>
-  <li class="page-item"><a class="page-link page-next" href="#"></a></li>
-</ul>
-
-        <div class="notification_table">
-          <div class="notification_table_head">
-            <div class="row">
-              <div class="col-12 col-md-4">Текст уведомления</div>
-              <div class="col-12 col-md-5">Дополнительная информация</div>
-              <div class="col-12 col-md-3 text-right">дата, время</div>
+      <div class="col-12 col-xl-9 col-xxl-8 order-xl-first">
+        <div class="wrapper">
+					<div class="wrapper_head">
+            <a href="my-loads-promo.html" class="btn hide_mobile">Назад</a>
+            <div class="wrapper_head_info">
+              <div class="wrapper_head_title"><small>Шаг 2</small> Ввод данных</div>
+              <div class="light_text">Обязательные поля отмечены звездочкой.<br>
+                Мы рекомендуем заполнять максимум полей, т.к. это поможет эффективнее продвигать композицию.</div>
             </div>
-          </div><!-- /trow -->
+					  <a href="my-loads-check.html" class="btn hide_mobile">Далее</a>
+          </div><!-- /wrapper_head -->
 
-          <div class="notification_table_row">
-            <div class="row">
-              <div class="col-12 col-md-4">Релиз <b>Название релиза</b> не прошел модерацию</div>
-              <div class="col-12 col-md-5"><small>Причина отклонения:</small> Не указано наличие ненормативной лексики в одной из композиций, <a href="#">узнать подробности</a></div>
-              <div class="col-12 col-md-3 notification_table_date">13:07, 12.06.2021</div>
-            </div>
-          </div><!-- /trow -->
+          
+          <div class="spoiler_min_row">
+            <div class="spoiler_min opened">
+              <div class="spoiler_min-title"><span>Даты</span></div>
+              <div class="spoiler_min-content" style="display: block;">
+                <div class="row valign-center">
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <label class="form-label">Дата релиза*</label>
+                    <input type="text" class="form-control form-control-date">
+                  </div>
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <label class="form-label">Дата предзаказа</label>
+                    <input type="text" class="form-control form-control-date">
+                  </div>
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <label class="form-label">Дата копирайта</label>
+                    <input type="text" class="form-control form-control-date">
+                  </div>
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <label class="form-label xxl-noheight"></label>
+                    <label class="form-check"><input type="checkbox"> Instant Gratification</label>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /spoiler_min -->
 
-          <div class="notification_table_row">
-            <div class="row">
-              <div class="col-12 col-md-4">Поступление средств с продаж</div>
-              <div class="col-12 col-md-5"><b>+ 2 000 руб.</b></div>
-              <div class="col-12 col-md-3 notification_table_date">13:07, 12.06.2021</div>
-            </div>
-          </div><!-- /trow -->
+            <div class="spoiler_min opened">
+              <div class="spoiler_min-title"><span>Уникальные настройки для площадок</span></div>
+              <div class="spoiler_min-content" style="display: block;">
+                <div class="form-line light_text">
+                  Для некоторых площадок можно установить уникальные дату и время релиза. Это необязательноое действие.
+                </div>
+                <h5>TikTok</h5>
+                <div class="row">
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <label class="form-label">Дата старта продаж</label>
+                    <input type="text" class="form-control form-control-date">
+                  </div>
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <label class="form-label">Час старта продаж</label>
+                    <input type="text" class="form-control form-control-time">
+                  </div>
+                </div>
+              </div>
+            </div><!-- /spoiler_min -->
+          </div><!-- /spoiler_min_row -->
 
-          <div class="notification_table_row">
-            <div class="row">
-              <div class="col-12 col-md-4">Успешное списание средств за ежемесячное продвижение</div>
-              <div class="col-12 col-md-5"><b>- 3 000 руб.</b></div>
-              <div class="col-12 col-md-3 notification_table_date">13:07, 12.06.2021</div>
-            </div>
-          </div><!-- /trow -->      
-        </div><!-- /notification_table -->
-
-      </div><!-- /col-xxl-8 -->
+        </div><!-- /wrapper -->
+      </div><!-- /col -->
     </div><!-- /row -->
+
 
 	</div><!-- /mainwrap_content -->
 </div><!-- /mainwrap -->
+
+
+<div class="steps_fix_footer">
+	<a href="my-loads-promo.html" class="btn btn-white">Назад</a>
+	<a href="my-loads-check.html" class="btn">Далее</a>
+</div><!-- /steps_fix_footer -->
 
 
 

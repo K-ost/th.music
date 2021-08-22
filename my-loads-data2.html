@@ -200,15 +200,19 @@
           
           <div class="spoiler_min_row">
             <div class="spoiler_min opened">
-              <div class="spoiler_min-title"><span>Добавляйте целые альбомы или синглы. К ним необходимо подобрать и загрузить обложку.</span></div>
+              <div class="spoiler_min-title"><span>Исполнители</span></div>
               <div class="spoiler_min-content" style="display: block;">
-                <label class="form-label">Основной исполнитель*</label>
                 <div class="row">
                   <div class="col-12 col-sm-6 col-xxl-4 form-line">
-                    <input type="text" class="form-control is-invalid">
-                    <div class="invalid-feedback">Error! This field shouldn't be empty</div>
+                    <label class="form-label">Основной исполнитель*</label>
+                    <input type="text" class="form-control">
                   </div>
                   <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <label class="form-label">FEAT</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <label class="form-label"></label>
                     <button class="btn btn-border btn-add btn-block"><span>Добавить исполнителя</span></button>
                   </div>
                 </div>
@@ -216,9 +220,9 @@
             </div><!-- /spoiler_min -->
 
             <div class="spoiler_min opened">
-              <div class="spoiler_min-title"><span>Жанры</span></div>
+              <div class="spoiler_min-title"><span>Жанры и тип исполения</span></div>
               <div class="spoiler_min-content" style="display: block;">
-                <div class="row">
+                <div class="row valign-center">
                   <div class="col-12 col-sm-6 col-xxl-4 form-line">
                     <label class="form-label">Основной жанр*</label>
                     <select class="js_select" data-placeholder="Выберите из списка">
@@ -243,6 +247,10 @@
                       <option>Wyoming</option>
                     </select>
                   </div>
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <label class="form-label"></label>
+                    <label class="form-check"><input type="checkbox"> Live</label>
+                  </div>
                 </div>
               </div>
             </div><!-- /spoiler_min -->
@@ -250,7 +258,7 @@
             <div class="spoiler_min opened">
               <div class="spoiler_min-title"><span>Язык и языковые особенности</span></div>
               <div class="spoiler_min-content" style="display: block;">
-                <div class="row">
+                <div class="row valign-center">
                   <div class="col-12 col-sm-6 col-xxl-4 form-line">
                     <label class="form-label">Язык релиза*</label>
                     <select class="js_select" data-placeholder="Выберите из списка">
@@ -275,18 +283,49 @@
                       <option>Wyoming</option>
                     </select>
                   </div>
+                  <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                    <label class="form-label"></label>
+                    <label class="form-check"><input type="checkbox"> Ненормативная лексика</label>
+                  </div>
                 </div>
               </div>
             </div><!-- /spoiler_min -->
 
             <div class="spoiler_min opened">
-              <div class="spoiler_min-title"><span>Добавляйте целые альбомы или синглы. К ним необходимо подобрать и загрузить обложку.</span></div>
+              <div class="spoiler_min-title"><span>Создатели релиза</span></div>
               <div class="spoiler_min-content" style="display: block;">
                 <div>
-                  <label class="form-label">Основной исполнитель*</label>
+                  <label class="form-label">Автор музыки*</label>
+                  <div class="row">
+                    <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                      <input type="text" class="form-control" placeholder="ФИО">
+                    </div>
+                    <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                      <button class="btn btn-border btn-add btn-block"><span>Добавить соавтора музыки</span></button>
+                    </div>
+                  </div>
+                  <label class="form-label">Автор текста*</label>
+                  <div class="row">
+                    <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                      <input type="text" class="form-control" placeholder="ФИО">
+                    </div>
+                    <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                      <button class="btn btn-border btn-add btn-block"><span>Добавить соавтора текста</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /spoiler_min -->
+            
+            
+            <div class="spoiler_min opened">
+              <div class="spoiler_min-title"><span>Наименование лейбла, копирайт</span></div>
+              <div class="spoiler_min-content" style="display: block;">
+                <div>
+                  <label class="form-label">Pline</label>
                   <div class="row valign-center">
                     <div class="col-12 col-sm-6 col-xxl-4 form-line">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" placeholder="Pline">
                     </div>
                     <div class="col-12 col-sm-6 col-xxl-4 form-line">
                       <label class="form-check"><input type="checkbox"> Свой копирайт</label>
@@ -299,9 +338,26 @@
             <div class="spoiler_min opened">
               <div class="spoiler_min-title"><span>Дополнительная информация</span></div>
               <div class="spoiler_min-content" style="display: block;">
-                <div class="light_text">
+                <div class="form-line light_text">
                   Вы можете также указать UPC, описание релиза и информацию для модератора, если необходимо.<br>
                   Это необязательные данные.
+                </div>
+              </div>
+              <div class="row valign-center">
+                <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                  <label class="form-label">Код UPC</label>
+                  <input type="text" class="form-control">
+                  <div class="form-control-text">Заполните это поле, если у вас уже есть код. Если нет — мы сформируем его сами</div>
+                </div>
+              </div>
+              <div class="row valign-center">
+                <div class="col-12 col-sm-6 form-line">
+                  <label class="form-label">Отрезок в TikTok</label>
+                  <input type="text" class="form-control" placeholder="Например, 00:34">
+                  <div class="form-control-text">С указанного времени отрезок отгружается в TikTok</div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-4 form-line">
+                  <label class="form-check"><input type="checkbox"> Свой копирайт</label>
                 </div>
               </div>
             </div><!-- /spoiler_min -->

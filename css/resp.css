@@ -36,7 +36,9 @@
   html.navpanel_opened .navpanel_close {
     display: block; }
   .mainwrap_content {
-    padding: 88px 16px 0;
+    padding-top: 88px;
+    padding-left: 16px;
+    padding-right: 16px;
     height: auto;
     overflow: visible; }
   .header {
@@ -47,7 +49,15 @@
   .header_icon_nav {
     display: block; }
   .wrapper:not(.wrapper-nobg) {
-    padding: 16px; } }
+    padding: 16px; }
+  /* history_funds_head */
+  .history_funds {
+    border-top: 1px solid #f5f5f5; }
+  .history_funds_head {
+    display: none; }
+  .history_funds_row {
+    padding-left: 0;
+    padding-right: 0; } }
 
 /* Tablet */
 @media screen and (max-width: 767px) {
@@ -180,6 +190,20 @@
   .addedfile_drag {
     min-height: auto;
     height: auto;
-    display: block; } }
+    display: block; }
+  /* progress */
+  .progress {
+    padding-bottom: 32px;
+    justify-content: space-between; }
+  .progress_line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; }
+  .progress_count {
+    text-align: right; }
+  /* history_funds */
+  .history_funds_name {
+    display: inline; } }
 
 /* Mobile */

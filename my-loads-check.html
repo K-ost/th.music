@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Мои загрузки</title>
+	<title>Ввод данных | Проверка данных</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -133,7 +133,7 @@
   
   <div class="steps_list_item">
     <label>
-      <input type="radio" name="flexRadioDefault" checked>
+      <input type="radio" name="flexRadioDefault" undefined>
       <div class="steps_list_body">
         <div class="steps_list_title"><b>Шаг 1</b> Работа с файлами</div>
         <div class="steps_list_percent">0%</div>
@@ -173,7 +173,7 @@
   
   <div class="steps_list_item">
     <label>
-      <input type="radio" name="flexRadioDefault" undefined>
+      <input type="radio" name="flexRadioDefault" checked>
       <div class="steps_list_body">
         <div class="steps_list_title"><b>Шаг 5</b> Проверка данных</div>
         <div class="steps_list_percent">100%</div>
@@ -183,57 +183,21 @@
   
 </div><!-- /steps_list -->
       </div><!-- /col -->
-			
+
 
       <div class="col-12 col-xl-9 col-xxl-8 order-xl-first">
         <div class="wrapper">
 					<div class="wrapper_head">
-            <span class="btn disabled hide_mobile">Назад</span>
+            <a href="my-loads-release.html" class="btn hide_mobile">Назад</a>
             <div class="wrapper_head_info">
-              <div class="wrapper_head_title"><small>Шаг 1</small> Работа с файлами</div>
-              <div class="light_text">Добавляйте целые альбомы или синглы.<br>
-              К ним необходимо подобрать и загрузить обложку.</div>
+              <div class="wrapper_head_title"><small>Шаг 5</small> Проверка данных</div>
+              <div class="light_text">Просмотрите наши рекомендации и обратите внимание на ошибки и отсутствие необходимой информации, которые мы обнаружили</div>
             </div>
-					  <a href="my-loads-data.html" class="btn hide_mobile">Далее</a>
+					  <span class="btn hide_mobile">Готово</span>
           </div><!-- /wrapper_head -->
-					
-					<div class="row">
-						<div class="col-12 col-xxl-3">
-							<h5>Обложка</h5>
-							<div class="row">
-								<div class="col-12 col-sm-3 col-xxl-12">
-									<div class="coverbox">
-  
-  <a href="#" class="coverbox-empty" data-bs-toggle="modal" data-bs-target="#upCover">
-    <img src="images/square.png" alt="">
-    <span class="coverbox-empty_inner">
-      <span class="coverbox_title">+ загрузить обложку</span>
-    </span>
-  </a>
-  
-  
-</div><!-- /coverbox -->
-								</div>
-								<div class="col-12 col-sm-3 col-xxl-12">
-									<div class="coverbox">
-  
-  
-  <img src="images/svg/chess.svg" alt="">
-  <div class="coverbox_icons">
-    <button class="edit_icon"></button>
-    <button class="delete_icon"></button>
-  </div>
-  
-</div><!-- /coverbox -->
-								</div>
-							</div>
-						</div>
 
-						<div class="col-12 col-xxl-9">
-							<h5>Загруженные треки</h5>
-							<div class="addedfile_row">
-								<a href="#" class="loadbtn loadbtn-small"><span>+ загрузить еще</span></a>
-								<div class="addedfile">
+
+          <div class="addedfile">
   <div class="addedfile_inner">
     
     <div class="addedfile_drag"></div>
@@ -324,7 +288,7 @@
   
 </div><!-- /addedfile -->
 
-								<div class="addedfile">
+          <div class="addedfile">
   <div class="addedfile_inner">
     
     <div class="addedfile_drag"></div>
@@ -415,7 +379,7 @@
   
 </div><!-- /addedfile -->
 
-								<div class="addedfile">
+          <div class="addedfile">
   <div class="addedfile_inner">
     
     <div class="addedfile_drag"></div>
@@ -506,282 +470,30 @@
   
 </div><!-- /addedfile -->
 
-								<div class="addedfile">
-  <div class="addedfile_inner">
-    
-    <div class="addedfile_drag"></div>
-    <div class="addedfile_content">
-      <div class="addedfile_title">Название файла-3.wav</div>
-      <div class="addedfile_col">
-        
-        
-        <div class="addedfile_done disabled">Не завершено</div>
-        <div></div>
-        
-        <div class="addedfile_icons">
-          <button class="edit_icon"></button>
-          <button class="delete_icon"></button>
-        </div>
-        
-      </div>
-    </div>
-  </div><!-- /addedfile_inner -->
 
-  
-  <div class="addedfile_hide">
-    <div class="form-line">
-      <label class="form-label">Название композиции*</label>
-      <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-      <label class="form-check form-check-inline"><input type="checkbox"> Live</label>
-    </div>
-    <div class="form-group">
-      <label class="form-label">FEAT</label>
-      <div class="row">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <button class="btn btn-border btn-add btn-block"><span>Добавить FEAT</span></button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Автор музыки*</label>
-      <div class="row">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <button class="btn btn-border btn-add btn-block"><span>Добавить совтора музыки</span></button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Автор текста*</label>
-      <div class="row">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <button class="btn btn-border btn-add btn-block"><span>Добавить совтора текста</span></button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="form-check form-check-inline"><input type="checkbox"> Присутствует ненормативная лексика</label>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Отрезок в TikTok</label>
-      <div class="row valign-center">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <label class="form-check form-check-inline"><input type="checkbox"> Предпрослушивание</label>
-        </div>
-      </div>
-    </div>
-    <div class="form-line">
-      <div class="light_text">С указанного времени отрезок отгружается в TikTok</div>
-    </div>
-    <div class="form-line">
-      <label class="form-label">Текст композиции</label>
-      <textarea class="form-control" placeholder="Text"></textarea>
-    </div>
-    <div class="form-line text-right">
-      <button class="btn btn-sm">Сохранить</button>
-    </div>
-  </div>
-  
-</div><!-- /addedfile -->
+          
+          <div class="row">
+            <div class="col-12 col-sm-6 col-xxl-4">
+              <div class="line_title">
+                <h5>Общие для альбома исполнители</h5>
+                <button class="btn-edit"></button>
+              </div><!-- /line_title -->
 
-								<div class="addedfile">
-  <div class="addedfile_inner">
-    
-    <div class="addedfile_drag"></div>
-    <div class="addedfile_content">
-      <div class="addedfile_title">Название файла-4.wav</div>
-      <div class="addedfile_col">
-        
-        <div class="addedfile_done active">Готово</div>
-        
-        <div></div>
-        
-        <div class="addedfile_icons">
-          <button class="edit_icon"></button>
-          <button class="delete_icon"></button>
-        </div>
-        
-      </div>
-    </div>
-  </div><!-- /addedfile_inner -->
+              <div class="form-line">
+                <div class="form-label light_text">Основной исполнитель*</div>
+                <input type="text" class="form-control" value="Имя исполнителя" readonly>
+              </div>
+              <div class="form-line">
+                <div class="form-label light_text">FEAT*</div>
+                <input type="text" class="form-control" value="Нет" readonly>
+              </div>
+              <div class="form-line">
+                <div class="form-label light_text">Дополнительный исполнитель*</div>
+                <input type="text" class="form-control" value="Имя исполнителя" readonly>
+              </div>
+            </div><!-- /col -->
+          </div><!-- /row -->
 
-  
-  <div class="addedfile_hide">
-    <div class="form-line">
-      <label class="form-label">Название композиции*</label>
-      <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-      <label class="form-check form-check-inline"><input type="checkbox"> Live</label>
-    </div>
-    <div class="form-group">
-      <label class="form-label">FEAT</label>
-      <div class="row">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <button class="btn btn-border btn-add btn-block"><span>Добавить FEAT</span></button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Автор музыки*</label>
-      <div class="row">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <button class="btn btn-border btn-add btn-block"><span>Добавить совтора музыки</span></button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Автор текста*</label>
-      <div class="row">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <button class="btn btn-border btn-add btn-block"><span>Добавить совтора текста</span></button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="form-check form-check-inline"><input type="checkbox"> Присутствует ненормативная лексика</label>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Отрезок в TikTok</label>
-      <div class="row valign-center">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <label class="form-check form-check-inline"><input type="checkbox"> Предпрослушивание</label>
-        </div>
-      </div>
-    </div>
-    <div class="form-line">
-      <div class="light_text">С указанного времени отрезок отгружается в TikTok</div>
-    </div>
-    <div class="form-line">
-      <label class="form-label">Текст композиции</label>
-      <textarea class="form-control" placeholder="Text"></textarea>
-    </div>
-    <div class="form-line text-right">
-      <button class="btn btn-sm">Сохранить</button>
-    </div>
-  </div>
-  
-</div><!-- /addedfile -->
-
-								<div class="addedfile">
-  <div class="addedfile_inner">
-    
-    <div class="addedfile_drag"></div>
-    <div class="addedfile_content">
-      <div class="addedfile_title">Название файла-5.wav</div>
-      <div class="addedfile_col">
-        
-        <div class="addedfile_done active">Готово</div>
-        
-        <div></div>
-        
-        <div class="addedfile_icons">
-          <button class="edit_icon"></button>
-          <button class="delete_icon"></button>
-        </div>
-        
-      </div>
-    </div>
-  </div><!-- /addedfile_inner -->
-
-  
-  <div class="addedfile_hide">
-    <div class="form-line">
-      <label class="form-label">Название композиции*</label>
-      <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-      <label class="form-check form-check-inline"><input type="checkbox"> Live</label>
-    </div>
-    <div class="form-group">
-      <label class="form-label">FEAT</label>
-      <div class="row">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <button class="btn btn-border btn-add btn-block"><span>Добавить FEAT</span></button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Автор музыки*</label>
-      <div class="row">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <button class="btn btn-border btn-add btn-block"><span>Добавить совтора музыки</span></button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Автор текста*</label>
-      <div class="row">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <button class="btn btn-border btn-add btn-block"><span>Добавить совтора текста</span></button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="form-check form-check-inline"><input type="checkbox"> Присутствует ненормативная лексика</label>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Отрезок в TikTok</label>
-      <div class="row valign-center">
-        <div class="col-12 col-sm-6 form-line">
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-12 col-sm-6 form-line">
-          <label class="form-check form-check-inline"><input type="checkbox"> Предпрослушивание</label>
-        </div>
-      </div>
-    </div>
-    <div class="form-line">
-      <div class="light_text">С указанного времени отрезок отгружается в TikTok</div>
-    </div>
-    <div class="form-line">
-      <label class="form-label">Текст композиции</label>
-      <textarea class="form-control" placeholder="Text"></textarea>
-    </div>
-    <div class="form-line text-right">
-      <button class="btn btn-sm">Сохранить</button>
-    </div>
-  </div>
-  
-</div><!-- /addedfile -->
-
-							</div>
-						</div>
-					</div><!-- /row -->
 
         </div><!-- /wrapper -->
       </div><!-- /col -->
@@ -792,31 +504,11 @@
 </div><!-- /mainwrap -->
 
 
-<div class="modal modal_large fade" id="upCover" data-bs-keyboard="true" tabindex="-1">
-	<div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-			<div class="modal-header modal-header-block">
-				<div class="modal-title">ЗАгрузка обложки</div>
-			</div>
-			<div class="infobox infobox-popup">
-  
-  <div class="infobox_title">Требования к файлам:</div>
-  Файлы в форматах png или jpeg с разрешением 1000*1000 px
-</div>
-
-			<div class="text-right">
-				<button class="btn">Продолжить</button>
-			</div>
-    </div>
-  </div>
-</div><!-- /modal -->
-
-
 <div class="steps_fix_footer">
-	<span class="btn disabled">Назад</span>
-	<a href="my-loads-data.html" class="btn">Далее</a>
+	<a href="my-loads-promo.html" class="btn btn-white">Назад</a>
+	<a href="my-loads-check.html" class="btn">Далее</a>
 </div><!-- /steps_fix_footer -->
+
 
 
 <div class="modal fade" id="uploadDemo" data-bs-keyboard="true" tabindex="-1">

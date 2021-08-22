@@ -117,6 +117,26 @@ $(function() {
 	$('.addedfile_drag').on('click', function() {
 		$(this).closest('.addedfile').find('.addedfile_hide').slideToggle(200);
 	});
+
+
+	// Datepicker
+	$('.form-control-date').datepicker({
+		language: "ru",
+		autoclose: true
+	});
+
+	// Timepicker
+	$('.form-control-time').timepicker({
+		timeFormat: 'h:mm p',
+		interval: 60,
+		minTime: '10',
+		maxTime: '6:00pm',
+		defaultTime: '11',
+		startTime: '10:00',
+		dynamic: true,
+		dropdown: true,
+		scrollbar: true
+	});
 	
 
 });

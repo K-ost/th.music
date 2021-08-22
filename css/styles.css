@@ -19,7 +19,7 @@ a:hover {
 .light_text {
   font-size: 13px;
   line-height: 18px;
-  color: #9B9B9B; }
+  color: #9B9B9B !important; }
 
 .row.valign-center {
   align-items: center; }
@@ -46,6 +46,12 @@ hr {
 
 .show_mobile {
   display: none; }
+
+.color-green {
+  color: #007D86; }
+
+.color-red {
+  color: #BF3913; }
 
 /* scroll */
 .jspScrollable, .jspContainer, .jspPane {
@@ -266,6 +272,26 @@ hr {
   .btn-chart.disabled .btn-chart-title {
     color: #9B9B9B; }
 
+/* btn-edit */
+.btn-edit {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url(../images/svg/pen.svg) center center no-repeat; }
+
 /* dropdown-menu */
 .dropdown-menu {
   background: #fff;
@@ -430,6 +456,7 @@ hr {
 .form-label {
   font-size: 12px;
   line-height: 14px;
+  min-height: 14px;
   margin: 0 0 12px;
   color: #14121E; }
 
@@ -441,6 +468,7 @@ hr {
 .invalid-feedback {
   color: #BF3913; }
 
+/* form-control */
 .form-control {
   background-color: #F2F2F2;
   border-radius: 8px;
@@ -458,6 +486,11 @@ hr {
     background-color: #fff;
     border-color: #9B9B9B;
     box-shadow: none !important; }
+  .form-control[readonly] {
+    background: 0;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0; }
   .form-control-date {
     background-image: url(../images/svg/date.svg);
     background-position: calc(100% - 12px) center;
@@ -465,6 +498,13 @@ hr {
     padding-right: 38px; }
     .form-control-date:focus {
       background-image: url(../images/svg/date-blue.svg); }
+  .form-control-time {
+    background-image: url(../images/svg/clock.svg);
+    background-position: calc(100% - 12px) center;
+    background-repeat: no-repeat;
+    padding-right: 38px; }
+    .form-control-time:focus {
+      background-image: url(../images/svg/clock-blue.svg); }
   .form-control.is-invalid {
     border-color: #BF3913; }
   .form-control:disabled {
@@ -503,6 +543,10 @@ textarea.form-control {
   resize: none;
   height: 92px;
   min-height: 0; }
+
+@media screen and (min-width: 1400px) {
+  .form-label {
+    min-height: 0; } }
 
 /* input pass safari */
 input[type=password]::-webkit-contacts-auto-fill-button,
@@ -664,6 +708,24 @@ input[type="checkbox"]:checked:hover {
     top: -3px; }
   .form-check:last-child {
     margin: 0; }
+
+/* line_title */
+.line_title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 0 24px; }
+  .line_title::after {
+    content: '';
+    display: block;
+    background: #f0f0f0;
+    height: 1px;
+    flex: 1;
+    margin: 0 0 0 16px; }
+  .line_title h5 {
+    margin: 0; }
+  .line_title .btn-edit {
+    margin-left: 12px; }
 
 /* Select2 */
 .select2-container {
@@ -1149,6 +1211,8 @@ body {
   padding: 16px 24px;
   height: calc(100vh - 78px);
   overflow: auto; }
+  .mainwrap_content-pb {
+    padding-bottom: 50px; }
 
 .navpanel {
   background: #14121E;
@@ -1168,11 +1232,13 @@ body {
     left: 0;
     top: 0;
     background: rgba(60, 64, 65, 0.4);
-    backdrop-filter: blur(10px);
     transition: all 200ms ease;
     opacity: 0;
     visibility: hidden;
-    z-index: 1018; }
+    z-index: 1018;
+    backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); }
   .navpanel_close {
     background-image: url("../images/svg/close-white.svg");
     background-repeat: no-repeat;
@@ -2284,7 +2350,8 @@ body {
   -webkit-border-radius: 0;
   -ms-border-radius: 0;
   margin: 0 0 24px;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .progress:last-child {
     margin: 0; }
   .progress_title {
@@ -2322,8 +2389,9 @@ body {
     line-height: 23px;
     color: #626262;
     min-width: 100px;
-    max-width: 100px;
-    margin-left: 4px; }
+    max-width: 108px;
+    margin-left: 4px;
+    white-space: nowrap; }
 
 /* dahsboard */
 .num_plays {
@@ -2348,3 +2416,66 @@ body {
   padding: 20px;
   min-height: 92px;
   margin-bottom: 20px; }
+
+/* balance-widjet */
+.balance-widjet {
+  background: #4CB7BF;
+  text-align: center;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  padding: 24px; }
+  .balance-widjet-title {
+    font-size: 15px;
+    line-height: 17px;
+    margin: 0 0 16px;
+    text-transform: uppercase; }
+  .balance-widjet-price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    white-space: nowrap; }
+    .balance-widjet-price ins {
+      font-size: 28px;
+      text-decoration: none; }
+
+/* finance_header */
+.finance_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+/* history_funds */
+.history_funds_head {
+  background: #fafafa;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 10px;
+  line-height: 11px;
+  text-transform: uppercase;
+  color: #9B9B9B;
+  padding: 16px; }
+  .history_funds_head.nobg {
+    background: 0;
+    padding-top: 0; }
+
+.history_funds_row {
+  border-bottom: 1px solid #f5f5f5;
+  padding: 16px 16px 8px;
+  font-size: 13px;
+  line-height: 15px;
+  color: #626262; }
+  .history_funds_row [class*='col-'] {
+    margin-bottom: 8px; }
+
+.history_funds_name {
+  margin-right: 16px;
+  display: none;
+  color: #9B9B9B; }
+
+.history_funds .color-green, .history_funds .color-red {
+  font-weight: 500; }
+
+.history_funds b {
+  color: #14121E;
+  font-weight: 500; }
