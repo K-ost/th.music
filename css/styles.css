@@ -1347,10 +1347,7 @@ body {
     transition: all 200ms ease;
     opacity: 0;
     visibility: hidden;
-    z-index: 1018;
-    backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); }
+    z-index: 1018; }
   .navpanel_close {
     background-image: url("../images/svg/close-white.svg");
     background-repeat: no-repeat;

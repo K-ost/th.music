@@ -35,6 +35,12 @@
     visibility: visible; }
   html.navpanel_opened .navpanel_close {
     display: block; }
+  html.navpanel_opened .mainwrap_content, html.navpanel_opened .btn-chat-fixed, html.navpanel_opened .header {
+    filter: blur(10px);
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -o-filter: blur(10px); }
   .mainwrap_content {
     padding-top: 88px;
     padding-left: 16px;
