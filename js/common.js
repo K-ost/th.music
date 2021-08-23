@@ -116,11 +116,14 @@ $(function() {
 	// addedfile_drag
 	$('.addedfile_drag').on('click', function() {
 		$(this).closest('.addedfile').find('.addedfile_hide').slideToggle(200);
+		$('textarea.readonly').each(function () {
+			this.setAttribute('style', 'height:' + 160 + 'px;');
+		});
 	});
 
 
 	// Datepicker
-	$('.form-control-date').datepicker({
+	$('.form-control-date').not('.readonly').datepicker({
 		language: "ru",
 		autoclose: true
 	});
@@ -136,6 +139,23 @@ $(function() {
 		dynamic: true,
 		dropdown: true,
 		scrollbar: true
+	});
+
+
+	// js_edit_fields_wrap
+	// $('.js_edit_fields').on('click', function() {
+	// 	if ( !$(this).hasClass('active') ) {
+	// 		$(this).addClass('active');
+	// 		$(this).closest('.js_edit_fields_wrap').find('.form-control').removeAttr('readonly');
+	// 	} else {
+	// 		$(this).removeClass('active');
+	// 		$(this).closest('.js_edit_fields_wrap').find('.form-control').attr('readonly', 'readonly');
+	// 	}
+	// });
+
+
+	$('textarea.readonly').each(function () {
+		this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px; overflow-y: hidden;');
 	});
 	
 

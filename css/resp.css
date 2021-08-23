@@ -85,6 +85,8 @@
   .btn-chat-fixed {
     bottom: 54px;
     right: 16px; }
+  .coverbox {
+    max-width: 240px; }
   /* modal */
   .modal-dialog, .modal_large .modal-dialog {
     max-width: none;
