@@ -36,6 +36,9 @@ $(function() {
 		return false;
 	});
 
+	// Mask form
+	$('.phone_input').mask('+7 (999) 999-99-99');
+
 	// spoiler
 	$('.spoiler-title').on('click', function() {
 		if ( !$(this).closest('.spoiler').hasClass('opened') ) {
