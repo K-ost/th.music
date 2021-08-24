@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Ввод данных | Реквизиты и верификация</title>
+	<title>Личный кабинет</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -84,7 +84,7 @@
 		<div class="header_icon header_icon_nav">
 			<a href="#" class="header_btn header_nav js_header_nav"></a>
 		</div>
-		
+		<div class="header_title">Личный кабинет</div>
 	</div>
 	<div class="header_icons">
 		<div class="header_icon hide_mobile">
@@ -125,204 +125,146 @@
 </header><!-- /header -->
 
 
-	<div class="mainwrap_content mainwrap_content-pb">
+	<div class="mainwrap_content">
 
     <div class="row">
-			<div class="col-12 col-xl-3 col-xxl-4 order-xl-last steps_column">
-        <div class="steps_list">
-  
-  <div class="steps_list_item">
-    <label>
-      <input type="radio" name="flexRadioDefault" undefined>
-      <div class="steps_list_body">
-        <div class="steps_list_title"><b>Шаг 1</b> Работа с файлами</div>
-        <div class="steps_list_percent">100%</div>
-      </div>
-    </label>
-  </div>
-  
-  <div class="steps_list_item">
-    <label>
-      <input type="radio" name="flexRadioDefault" undefined>
-      <div class="steps_list_body">
-        <div class="steps_list_title"><b>Шаг 2</b> Ввод данных</div>
-        <div class="steps_list_percent">100%</div>
-      </div>
-    </label>
-  </div>
-  
-  <div class="steps_list_item">
-    <label>
-      <input type="radio" name="flexRadioDefault" undefined>
-      <div class="steps_list_body">
-        <div class="steps_list_title"><b>Шаг 3</b> Промо</div>
-        <div class="steps_list_percent">100%</div>
-      </div>
-    </label>
-  </div>
-  
-  <div class="steps_list_item">
-    <label>
-      <input type="radio" name="flexRadioDefault" undefined>
-      <div class="steps_list_body">
-        <div class="steps_list_title"><b>Шаг 4</b> Выбор площадок и дат релиза</div>
-        <div class="steps_list_percent">100%</div>
-      </div>
-    </label>
-  </div>
-  
-  <div class="steps_list_item">
-    <label>
-      <input type="radio" name="flexRadioDefault" undefined>
-      <div class="steps_list_body">
-        <div class="steps_list_title"><b>Шаг 5</b> Проверка данных</div>
-        <div class="steps_list_percent">100%</div>
-      </div>
-    </label>
-  </div>
-  
-  <div class="steps_list_item">
-    <label>
-      <input type="radio" name="flexRadioDefault" checked>
-      <div class="steps_list_body">
-        <div class="steps_list_title"><b>Шаг 6</b> Реквизиты и верификация</div>
-        <div class="steps_list_percent"></div>
-      </div>
-    </label>
-  </div>
-  
-</div><!-- /steps_list -->
+      <div class="col-12 col-xl-5">
+        <div class="wrapper">
+          <h2>Данные об аккаунте</h2>
+
+          <div class="row">
+            <div class="col-12 col-sm-8 col-xl-12">
+              <div class="line-title"><span>Данные для входа</span></div>
+              <div class="row">
+                <div class="col-12 col-sm-6 form-line">
+                  <label class="form-label light_text">Номер телефона</label>
+                  <input type="text" class="form-control readonly" value="+7 912 *** ** 64" readonly>
+                  <button class="btn-edit"></button>
+                </div>
+                <div class="col-12 col-sm-6 form-line last">
+                  <label class="form-label light_text">Пароль</label>
+                  <input type="password" class="form-control readonly" value="12345678" readonly>
+                  <button class="btn-edit"></button>
+                </div>
+              </div>
+            </div><!-- /col -->
+            <div class="col-12 col-sm-4 col-xl-12">
+              <div class="line-title"><span>Дополнительно</span></div>
+              <div class="row">
+                <div class="col-12 col-sm-6 form-line last">
+                  <label class="form-label light_text">E-mail</label>
+                  <input type="email" class="form-control readonly" value="pochta@gmail.com" readonly>
+                  <button class="btn-edit"></button>
+                </div>
+              </div>
+            </div><!-- /col -->
+          </div><!-- /row -->
+
+          <div class="line-title"><span>Привязанные соцсети</span></div>
+          <div class="form-line last">
+            <div class="row row_profile_socials">
+              <div class="col-6 col-sm-4 col-xl-6 col-xxl-4">
+                <a href="#" class="btn btn-grey btn-sq btn-img"><img src="images/svg/tme-black.svg" alt=""></a>
+              </div>
+              <div class="col-6 col-sm-4 col-xl-6 col-xxl-4">
+                <a href="#" class="btn btn-grey btn-sq btn-img"><img src="images/svg/vk-black.svg" alt=""></a>
+              </div>
+              <div class="col-12 col-sm-4 col-xl-12 col-xxl-4">
+                <a href="#" class="btn btn-border btn-plus"><span>Добавить соцсеть</span></a>
+              </div>
+            </div><!-- /row_profile_socials -->
+          </div><!-- /form-line -->
+          
+          <div class="line-title"><span>Действия</span></div>
+          <div class="form-line profile_actions">
+            <a href="#">Выйти из аккаунта</a>
+            <a href="#">Удалить аккаунт</a>
+          </div><!-- /form-line -->
+
+        </div><!-- /wrapper -->
       </div><!-- /col -->
 
 
-      <div class="col-12 col-xl-9 col-xxl-8 order-xl-first">
+      <div class="col-12 col-xl-7">
         <div class="wrapper">
-					<div class="wrapper_head">
-            <a href="my-loads-check.html" class="btn hide_mobile">Назад</a>
-            <div class="wrapper_head_info">
-              <div class="wrapper_head_title"><small>Шаг 6</small> Реквизиты и верификация</div>
-              <div class="light_text">Данный шаг необходимо пройти только раз. Указанные данные будут храниться в системе. </div>
+          <h2>Верификация и реквизиты</h2>
+          <div class="form-line light_text">Для изменения всех данных, кроме реквизитов, вам необходимо связаться с <a href="#">нашим менеджером</a></div>
+          <div class="line_title">
+            <h5>Тип лица и роялти</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="row row-min btn-choose-row">
+            <div class="col-12 col-md-4">
+              <label class="btn-choose">
+                <input type="radio" name="pay">
+                <span class="btn-choose-text"><b>Физ. лицо</b> Роялти: 50/50</span>
+              </label>
             </div>
-					  <span class="btn hide_mobile">Готово</span>
-          </div><!-- /wrapper_head -->
+            <div class="col-12 col-md-4">
+              <label class="btn-choose">
+                <input type="radio" name="pay">
+                <span class="btn-choose-text"><b>Самозанятый</b> Роялти: 60/40</span>
+              </label>
+            </div>
+            <div class="col-12 col-md-4">
+              <label class="btn-choose">
+                <input type="radio" name="pay">
+                <span class="btn-choose-text"><b>ИП или ООО</b> Роялти: 70/30</span>
+              </label>
+            </div>
+          </div><!-- /row -->
 
-
-          <div class="spoiler_min opened">
-            <div class="spoiler_min-title"><span>Тип лица</span></div>
-            <div class="spoiler_min-content" style="display: block;">
-              <div class="row row-min">
-                <div class="col-12 col-md-4">
-                  <label class="btn-choose">
-                    <input type="radio" name="pay">
-                    <span class="btn-choose-text"><b>Физ. лицо</b> Роялти: 50/50</span>
-                  </label>
-                </div>
-                <div class="col-12 col-md-4">
-                  <label class="btn-choose">
-                    <input type="radio" name="pay">
-                    <span class="btn-choose-text"><b>Самозанятый</b> Роялти: 60/40</span>
-                  </label>
-                </div>
-                <div class="col-12 col-md-4">
-                  <label class="btn-choose">
-                    <input type="radio" name="pay">
-                    <span class="btn-choose-text"><b>ИП или ООО</b> Роялти: 70/30</span>
-                  </label>
-                </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-xxl-4">
+              <div class="line-title"><span>Личные данные</span></div>
+              <div class="form-line">
+                <label class="form-label light_text">Фамилия</label>
+                <input type="text" class="form-control readonly" value="Константинопольский" readonly>
               </div>
-            </div>
-          </div><!-- /spoiler_min -->
-
-
-          <div class="spoiler_min opened">
-            <div class="spoiler_min-title"><span>Верификация</span></div>
-            <div class="spoiler_min-content" style="display: block;">
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <button class="btn-pay"><img src="images/svg/gos.svg" alt=""></button>
-                </div>
-                <div class="col-12 col-md-6">
-                  <button class="btn-pay" data-bs-toggle="tooltip" data-bs-placement="right" title="Необходимо будет сделать селфи с паспортом на фоне нашей страницы с QR-кодом">Селфи с паспортом</button>
-                </div>
+              <div class="form-line">
+                <label class="form-label light_text">Имя</label>
+                <input type="text" class="form-control readonly" value="Константин" readonly>
               </div>
-            </div>
-          </div><!-- /spoiler_min -->
-          
-          
-          <div class="spoiler_min opened">
-            <div class="spoiler_min-title"><span>Личные данные</span></div>
-            <div class="spoiler_min-content" style="display: block;">
-              <div class="row">
-                <div class="col-12 col-sm-6 col-xxl-4 form-line">
-                  <label class="form-label">Наименование организации</label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="col-12 col-sm-6 col-xxl-4 form-line">
-                  <label class="form-label">E-mail</label>
-                  <input type="text" class="form-control">
-                  <div class="form-control-text">На электронную почту мы будем отправлять важные документы</div>
-                </div>
+              <div class="form-line">
+                <label class="form-label light_text">Отчество</label>
+                <input type="text" class="form-control readonly" value="Константинович" readonly>
               </div>
-            </div>
-          </div><!-- /spoiler_min -->
+            </div><!-- /col -->
 
+            <div class="col-12 col-sm-6 col-xxl-4 form-line">
+              <div class="line-title"><span>Документы</span></div>
+              <div class="doc-uploaded">Паспорт: 67** ****54</div>
+              <div class="doc-uploaded">Скан паспорта загружен</div>
+              <div class="doc-uploaded">ИНН: 66********72</div>
+              <div class="doc-uploaded">СНИЛС: 19*******55</div>
+            </div><!-- /col -->
 
-          <div class="spoiler_min opened">
-            <div class="spoiler_min-title"><span>Документы</span></div>
-            <div class="spoiler_min-content" style="display: block;">
-              <div class="row">
-                <div class="col-12 col-sm-6 col-xxl-4 form-line">
-                  <label class="form-label">ИНН</label>
-                  <input type="text" class="form-control">
-                </div>
+            <div class="col-12 col-xxl-4 form-line">
+              <div class="line_title">
+                <h5>Реквизиты для выплат</h5>
+                <button class="btn-edit js_edit_fields"></button>
+              </div><!-- /line_title -->
+              <div class="form-line">
+                <label class="form-label light_text">Номер счета</label>
+                <input type="text" class="form-control readonly" value="75784758478478578478" readonly>
               </div>
-            </div>
-          </div><!-- /spoiler_min -->
-          
-          
-          <div class="spoiler_min opened">
-            <div class="spoiler_min-title"><span>Реквизиты счета для выплат</span></div>
-            <div class="spoiler_min-content" style="display: block;">
-              <div class="row">
-                <div class="col-12 col-sm-6 col-xxl-4 form-line">
-                  <label class="form-label">Номер счета</label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="col-12 col-sm-6 col-xxl-4 form-line">
-                  <label class="form-label">Корреспондентский счет</label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="col-12 col-sm-6 col-xxl-4 form-line">
-                  <label class="form-label">БИК банка</label>
-                  <input type="text" class="form-control">
-                </div>
+              <div class="form-line">
+                <label class="form-label light_text">Корреспондентский счет</label>
+                <input type="text" class="form-control readonly" value="75784758478478578478" readonly>
               </div>
-            </div>
-          </div><!-- /spoiler_min -->
+              <div class="form-line">
+                <label class="form-label light_text">БИК банка</label>
+                <input type="text" class="form-control readonly" value="846473094" readonly>
+              </div>
+            </div><!-- /col -->
+          </div><!-- /row -->
           
-          
-          <div class="spoiler_min opened">
-            <div class="spoiler_min-title"><span>Верификация личности</span></div>
-            <div class="spoiler_min-content" style="display: block;">
-              <div class="form-line light_text">Загрузите скан или фотографию основной страницы паспорта (для ООО — паспорт директора юр. лица) в хорошем качестве.</div>
-              <a href="#" class="loadbtn loadbtn-file"><span>+ загрузить</span></a>
-            </div>
-          </div><!-- /spoiler_min -->
-
         </div><!-- /wrapper -->
       </div><!-- /col -->
     </div><!-- /row -->
 
-
 	</div><!-- /mainwrap_content -->
 </div><!-- /mainwrap -->
-
-
-<div class="steps_fix_footer">
-	<a href="my-loads-check.html" class="btn btn-white">Назад</a>
-	<span class="btn">Готово</span>
-</div><!-- /steps_fix_footer -->
-
 
 
 <div class="modal fade" id="uploadDemo" data-bs-keyboard="true" tabindex="-1">

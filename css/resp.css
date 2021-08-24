@@ -10,7 +10,12 @@
   .pagehead {
     display: block; }
   .pagehead h2 {
-    margin: 0 0 16px; } }
+    margin: 0 0 16px; }
+  /* uploads_search */
+  .uploads_search .nav {
+    margin-bottom: 24px; }
+  .uploads_search .search {
+    margin-bottom: 0; } }
 
 /* Medium */
 @media screen and (max-width: 1199px) {
@@ -212,6 +217,13 @@
     text-align: right; }
   /* history_funds */
   .history_funds_name {
-    display: inline; } }
+    display: inline; }
+  /* tablehead */
+  .tablehead_title {
+    margin-right: 60px; }
+  .tablehead_dots {
+    display: none; }
+  .tablehead_show {
+    display: block; } }
 
 /* Mobile */

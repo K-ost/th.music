@@ -145,6 +145,14 @@ $(function() {
 	});
 
 
+	// tablehead_dots
+	$('.tablehead_dots').on('click', function() {
+		$(this).toggleClass('active');
+		$(this).closest('.uptable').find('.tablehead').toggleClass('opened');
+		$(this).closest('.uptable').find('.uptable_hide').slideToggle(200);
+	});
+
+
 	// js_edit_fields_wrap
 	// $('.js_edit_fields').on('click', function() {
 	// 	if ( !$(this).hasClass('active') ) {
