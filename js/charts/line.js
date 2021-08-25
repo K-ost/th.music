@@ -32,6 +32,7 @@ let myChart = new Chart(
     data: data,
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           position: 'bottom',

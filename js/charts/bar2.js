@@ -12,6 +12,7 @@ const configCountries = {
   type: 'bar',
   data: dataCountries,
   options: {
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'bottom',

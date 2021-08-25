@@ -32,6 +32,7 @@ const configDemography = {
   type: 'bar',
   data: dataDemography,
   options: {
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'bottom',
@@ -68,3 +69,4 @@ const configDemography = {
 };
 
 let barDemography = new Chart(document.getElementById('bar-demography'), configDemography)
+barDemography.height = 1000;

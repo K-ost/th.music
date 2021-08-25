@@ -9,8 +9,7 @@
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/style/jquery.jscrollpane.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
@@ -138,13 +137,17 @@
               <div class="row">
                 <div class="col-12 col-sm-6 form-line">
                   <label class="form-label light_text">Номер телефона</label>
-                  <input type="text" class="form-control readonly" value="+7 912 *** ** 64" readonly>
-                  <button class="btn-edit"></button>
+                  <div class="form-control-edit js_edit_fields_wrap">
+                    <input type="text" class="form-control readonly" value="+7 912 *** ** 64" readonly>
+                    <button class="btn-edit js_edit_fields"></button>
+                  </div>
                 </div>
                 <div class="col-12 col-sm-6 form-line last">
                   <label class="form-label light_text">Пароль</label>
-                  <input type="password" class="form-control readonly" value="12345678" readonly>
-                  <button class="btn-edit"></button>
+                  <div class="form-control-edit js_edit_fields_wrap">
+                    <input type="password" class="form-control readonly" value="12345678" readonly>
+                    <button class="btn-edit js_edit_fields"></button>
+                  </div>
                 </div>
               </div>
             </div><!-- /col -->
@@ -153,8 +156,10 @@
               <div class="row">
                 <div class="col-12 col-sm-6 form-line last">
                   <label class="form-label light_text">E-mail</label>
-                  <input type="email" class="form-control readonly" value="pochta@gmail.com" readonly>
-                  <button class="btn-edit"></button>
+                  <div class="form-control-edit js_edit_fields_wrap">
+                    <input type="email" class="form-control readonly" value="pochta@gmail.com" readonly>
+                    <button class="btn-edit js_edit_fields"></button>
+                  </div>
                 </div>
               </div>
             </div><!-- /col -->
@@ -191,7 +196,6 @@
           <div class="form-line light_text">Для изменения всех данных, кроме реквизитов, вам необходимо связаться с <a href="#">нашим менеджером</a></div>
           <div class="line_title">
             <h5>Тип лица и роялти</h5>
-            <button class="btn-edit js_edit_fields"></button>
           </div><!-- /line_title -->
           <div class="row row-min btn-choose-row">
             <div class="col-12 col-md-4">
@@ -215,8 +219,11 @@
           </div><!-- /row -->
 
           <div class="row">
-            <div class="col-12 col-sm-6 col-xxl-4">
-              <div class="line-title"><span>Личные данные</span></div>
+            <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+              <div class="line_title">
+                <h5>Личные данные</h5>
+                  <button class="btn-edit js_edit_fields"></button>
+              </div>
               <div class="form-line">
                 <label class="form-label light_text">Фамилия</label>
                 <input type="text" class="form-control readonly" value="Константинопольский" readonly>
@@ -239,7 +246,7 @@
               <div class="doc-uploaded">СНИЛС: 19*******55</div>
             </div><!-- /col -->
 
-            <div class="col-12 col-xxl-4 form-line">
+            <div class="col-12 col-xxl-4 form-line js_edit_fields_wrap">
               <div class="line_title">
                 <h5>Реквизиты для выплат</h5>
                 <button class="btn-edit js_edit_fields"></button>
@@ -344,9 +351,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ru.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>

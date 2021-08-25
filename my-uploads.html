@@ -9,8 +9,7 @@
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/style/jquery.jscrollpane.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
@@ -145,41 +144,91 @@
       </div>
     </div><!-- /row -->
 
+		
+		<div class="filter_wrapper">
+			<button class="show-filter show_mobile js_show-filter">Фильтры и сортировка</button>
 
-		<div class="uptable">
-  <div class="tablehead">
-  <div class="row">
-    <div class="col-12 col-md-4">
-      <div class="tablehead_main">
-        <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
-        <div class="tablehead_title">Название альбома / сингла / EP</div>
-        <a href="#" class="tablehead_show"></a>
+			<div class="filter_wrapper_col">
+				<div class="filter_wrapper_title">Фильтровать</div>
+				<select class="filter_dropdown" data-placeholder="Площадки">
+					<option>Площадки 1</option>
+					<option>Площадки 2</option>
+					<option>Площадки 3</option>
+				</select>
+
+				<div class="form-line">
+					<input type="text" class="form-control form-control-date" placeholder="Старт продаж">
+				</div>
+				<div class="form-line">
+					<input type="text" class="form-control form-control-date" placeholder="Добавлен">
+				</div>
+
+				<div class="filter_wrapper_title">Сортировать</div>
+				<select class="filter_dropdown" data-placeholder="По дате добавления">
+					<option>По дате добавления &uarr;</option>
+					<option>По дате добавления &darr;</option>
+				</select>
+
+				<div class="filter_wrapper_title">Показывать по</div>
+				<select class="filter_dropdown" data-placeholder="10">
+					<option>10</option>
+					<option>20</option>
+					<option>30</option>
+				</select>
+			</div><!-- /filter_wrapper_col -->
+			<ul class="pagination">
+  <li class="page-item active"><a class="page-link page-prev" href="#"></a></li>
+  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="#">4</a></li>
+  <li class="page-item"><a class="page-link" href="#">5</a></li>
+  <li class="page-item"><a class="page-link page-next" href="#"></a></li>
+</ul>
+		</div><!-- /filter_wrapper -->
+
+
+		<div class="uptable_body hide_mobile">
+			<div class="uptable">
+  <div class="tablehead ">
+  <div class="tablehead_inner">
+    <div class="row">
+      <div class="col-12  col-md-4">
+        <div class="tablehead_main">
+          <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
+          <div class="tablehead_title">Название альбома / сингла / EP</div>
+        </div>
       </div>
-    </div>
-    <div class="col-12 col-md-8">
-      <div class="tablehead_entry">
-        <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
-        <div class="tablehead_entry_inner">
-          <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
-          <div class="tablehead_cell"><span>Дата релиза</span> 20.05.2021</div>
-          <div class="tablehead_cell"><span>Дата начала продаж</span> 20.05.2021</div>
-          <div class="tablehead_cell">
-            <div class="dropdown">
-              <button class="btn btn-drop" type="button" data-bs-toggle="dropdown">Треки <b>15</b></button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
-                <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
-                <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
-                <li><a class="dropdown-item dropdown-del" href="#">Удалить релиз</a></li>
-              </ul>
+      <div class="col-12  col-md-8">
+        <div class="tablehead_entry">
+          <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
+          <div class="tablehead_entry_inner">
+            
+            <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
+            <div class="tablehead_cell lg_hide"><span>Дата релиза</span> 20.05.2021</div>
+            <div class="tablehead_cell xl_hide"><span>Дата начала продаж</span> 20.05.2021</div>
+            
+            <div class="tablehead_cell">
+              <button class="btn btn-drop js_tablehead_more" type="button">Треки <b>15</b></button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="tablehead_dots"></button>
+  <div class="dropdown">
+    <button class="tablehead_dots" data-bs-toggle="dropdown"></button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
+      <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
+      <li><a class="dropdown-item dropdown-info" href="#" data-bs-toggle="modal" data-bs-target="#info_release">Больше информации</a></li>
+      <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
+      <li><a class="dropdown-item dropdown-del" href="#" data-bs-toggle="modal" data-bs-target="#delete_release">Удалить релиз</a></li>
+    </ul>
+  </div>
+  
 </div><!-- /tablehead -->
+
 
   <div class="uptable_hide">
     <div class="tablemid">
@@ -188,14 +237,16 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">все прослушивания</div>
-        <div class="col-3">Платные прослушивания</div>
-        <div class="col-3">Заработано с релиза, руб.</div>
-        <div class="col-3"></div>
+        <div class="col-4">все прослушивания</div>
+        <div class="col-4">Платные прослушивания</div>
+        <div class="col-4">Заработано с релиза, руб.</div>
       </div>
     </div>
+    
+    
   </div>
 </div><!-- /tablemid -->
 
@@ -205,21 +256,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -228,21 +283,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -251,59 +310,330 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
   </div>
 </div><!-- /uptable -->
-		<div class="uptable">
-  <div class="tablehead">
-  <div class="row">
-    <div class="col-12 col-md-4">
-      <div class="tablehead_main">
-        <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
-        <div class="tablehead_title">Название альбома / сингла / EP</div>
-        <a href="#" class="tablehead_show"></a>
+
+<div class="modal fade" id="delete_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Вы уверены, что хотите удалить релиз</div>
+			</div>
+      <div class="text-right">
+        <button class="btn btn-grey">Отмена</button>
+        <button class="btn">Удалить</button>
       </div>
     </div>
-    <div class="col-12 col-md-8">
-      <div class="tablehead_entry">
-        <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
-        <div class="tablehead_entry_inner">
-          <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
-          <div class="tablehead_cell"><span>Дата релиза</span> 20.05.2021</div>
-          <div class="tablehead_cell"><span>Дата начала продаж</span> 20.05.2021</div>
-          <div class="tablehead_cell">
-            <div class="dropdown">
-              <button class="btn btn-drop" type="button" data-bs-toggle="dropdown">Треки <b>15</b></button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
-                <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
-                <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
-                <li><a class="dropdown-item dropdown-del" href="#">Удалить релиз</a></li>
-              </ul>
+  </div>
+</div><!-- /modal -->
+
+<div class="modal fade" id="info_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Информация о релизе</div>
+			</div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Общие для альбома исполнители</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Жанры</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной жанр*</div>
+            <input type="text" class="form-control readonly" value="Rock" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный жанр</div>
+            <input type="text" class="form-control readonly" value="Metal" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Язык и языковые особенности</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Язык релиза*</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Язык метаданных</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Наименование лейбла, копирайт</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Pline</div>
+            <input type="text" class="form-control readonly" value="th.music" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Дополнительно</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Код UPC</div>
+            <input type="text" class="form-control readonly" value="-" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Промо</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Описание релиза</div>
+            <p>Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации форм развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Поддержка в соцсетях</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Комментарий для модератора</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <div class="row">
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Даты</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата релиза*</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.07.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата предзаказа</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.06.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата копирайта</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.05.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Продажи в TikTok</div>
+              <input type="text" class="form-control form-control-date readonly" value="18.05.2021 в 20:00" readonly>
+            </div>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+      <div class="text-right">
+        <button class="btn">Редактировать</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+			<div class="uptable">
+				<div class="tablehead tablehead-error">
+  <div class="tablehead_inner">
+    <div class="row">
+      <div class="col-12 col-md-6 ">
+        <div class="tablehead_main">
+          <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
+          <div class="tablehead_title">Название альбома / сингла / EP</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 ">
+        <div class="tablehead_entry">
+          <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
+          <div class="tablehead_entry_inner">
+            
+            <div class="tablehead_cell">
+              <button class="btn btn-drop js_tablehead_more" type="button">Треки <b>15</b></button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="tablehead_dots"></button>
+  <div class="dropdown">
+    <button class="tablehead_dots" data-bs-toggle="dropdown"></button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
+      <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
+      <li><a class="dropdown-item dropdown-info" href="#" data-bs-toggle="modal" data-bs-target="#info_release">Больше информации</a></li>
+      <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
+      <li><a class="dropdown-item dropdown-del" href="#" data-bs-toggle="modal" data-bs-target="#delete_release">Удалить релиз</a></li>
+    </ul>
+  </div>
+  
+  <div class="tablehead_error">
+    <div>
+      <div class="tablehead_error_title">Причина отклонения</div>
+      <p>Не указано наличие ненормативной лексики в одной из композиций. <a href="#" data-bs-toggle="modal" data-bs-target="#reason_reject">Подробнее</a></p>
+    </div>
+  </div>
+  
 </div><!-- /tablehead -->
+
+<div class="tablehead_error_bottom">
+  <div class="tablehead_error_title">Причина отклонения</div>
+  <p>Не указано наличие ненормативной лексики в одной из композиций. <a href="#" data-bs-toggle="modal" data-bs-target="#reason_reject">Подробнее</a></p>
+</div>
+
+
+				<div class="uptable_hide">
+					<div class="tablemid tablemid-error">
+  <div class="row">
+    <div class="col-4">
+      <div class="tablemid_first">Название композиции</div>
+    </div>
+    <div class="col-4">Исполнитель</div>
+    
+    
+    <div class="col-4">Нарушение</div>
+    
+  </div>
+</div><!-- /tablemid -->
+
+					<div class="tableline tableline-error">
+  <div class="row">
+    <div class="col-4">
+      <div class="tablemid_first">Название композиции</div>
+    </div>
+    <div class="col-4">Исполнитель</div>
+    
+    
+    
+    <div class="col-4">
+      <div class="tableline_error">Не указано наличие ненормативной лексики</div>
+    </div>
+    
+  </div>
+  
+</div><!-- /tableline -->
+
+					<div class="tableline tableline-error">
+  <div class="row">
+    <div class="col-4">
+      <div class="tablemid_first">Название композиции</div>
+    </div>
+    <div class="col-4">Исполнитель</div>
+    
+    
+    
+    <div class="col-4">
+      <div class="tableline_error">Не указано наличие ненормативной лексики</div>
+    </div>
+    
+  </div>
+  
+</div><!-- /tableline -->
+
+					<div class="tableline tableline-error">
+  <div class="row">
+    <div class="col-4">
+      <div class="tablemid_first">Название композиции</div>
+    </div>
+    <div class="col-4">Исполнитель</div>
+    
+    
+    
+    <div class="col-4">
+      <div class="tableline_error">Не указано наличие ненормативной лексики</div>
+    </div>
+    
+  </div>
+  
+</div><!-- /tableline -->
+
+				</div>
+			</div><!-- /uptable -->
+
+			<div class="uptable">
+  <div class="tablehead ">
+  <div class="tablehead_inner">
+    <div class="row">
+      <div class="col-12  col-md-4">
+        <div class="tablehead_main">
+          <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
+          <div class="tablehead_title">Название альбома / сингла / EP</div>
+        </div>
+      </div>
+      <div class="col-12  col-md-8">
+        <div class="tablehead_entry">
+          <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
+          <div class="tablehead_entry_inner">
+            
+            <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
+            <div class="tablehead_cell lg_hide"><span>Дата релиза</span> 20.05.2021</div>
+            <div class="tablehead_cell xl_hide"><span>Дата начала продаж</span> 20.05.2021</div>
+            
+            <div class="tablehead_cell">
+              <button class="btn btn-drop js_tablehead_more" type="button">Треки <b>15</b></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="tablehead_dots" data-bs-toggle="dropdown"></button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
+      <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
+      <li><a class="dropdown-item dropdown-info" href="#" data-bs-toggle="modal" data-bs-target="#info_release">Больше информации</a></li>
+      <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
+      <li><a class="dropdown-item dropdown-del" href="#" data-bs-toggle="modal" data-bs-target="#delete_release">Удалить релиз</a></li>
+    </ul>
+  </div>
+  
+</div><!-- /tablehead -->
+
 
   <div class="uptable_hide">
     <div class="tablemid">
@@ -312,14 +642,16 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">все прослушивания</div>
-        <div class="col-3">Платные прослушивания</div>
-        <div class="col-3">Заработано с релиза, руб.</div>
-        <div class="col-3"></div>
+        <div class="col-4">все прослушивания</div>
+        <div class="col-4">Платные прослушивания</div>
+        <div class="col-4">Заработано с релиза, руб.</div>
       </div>
     </div>
+    
+    
   </div>
 </div><!-- /tablemid -->
 
@@ -329,21 +661,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -352,21 +688,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -375,59 +715,212 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
   </div>
 </div><!-- /uptable -->
-		<div class="uptable">
-  <div class="tablehead">
-  <div class="row">
-    <div class="col-12 col-md-4">
-      <div class="tablehead_main">
-        <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
-        <div class="tablehead_title">Название альбома / сингла / EP</div>
-        <a href="#" class="tablehead_show"></a>
+
+<div class="modal fade" id="delete_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Вы уверены, что хотите удалить релиз</div>
+			</div>
+      <div class="text-right">
+        <button class="btn btn-grey">Отмена</button>
+        <button class="btn">Удалить</button>
       </div>
     </div>
-    <div class="col-12 col-md-8">
-      <div class="tablehead_entry">
-        <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
-        <div class="tablehead_entry_inner">
-          <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
-          <div class="tablehead_cell"><span>Дата релиза</span> 20.05.2021</div>
-          <div class="tablehead_cell"><span>Дата начала продаж</span> 20.05.2021</div>
-          <div class="tablehead_cell">
-            <div class="dropdown">
-              <button class="btn btn-drop" type="button" data-bs-toggle="dropdown">Треки <b>15</b></button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
-                <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
-                <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
-                <li><a class="dropdown-item dropdown-del" href="#">Удалить релиз</a></li>
-              </ul>
+  </div>
+</div><!-- /modal -->
+
+<div class="modal fade" id="info_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Информация о релизе</div>
+			</div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Общие для альбома исполнители</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Жанры</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной жанр*</div>
+            <input type="text" class="form-control readonly" value="Rock" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный жанр</div>
+            <input type="text" class="form-control readonly" value="Metal" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Язык и языковые особенности</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Язык релиза*</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Язык метаданных</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Наименование лейбла, копирайт</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Pline</div>
+            <input type="text" class="form-control readonly" value="th.music" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Дополнительно</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Код UPC</div>
+            <input type="text" class="form-control readonly" value="-" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Промо</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Описание релиза</div>
+            <p>Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации форм развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Поддержка в соцсетях</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Комментарий для модератора</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <div class="row">
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Даты</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата релиза*</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.07.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата предзаказа</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.06.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата копирайта</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.05.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Продажи в TikTok</div>
+              <input type="text" class="form-control form-control-date readonly" value="18.05.2021 в 20:00" readonly>
+            </div>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+      <div class="text-right">
+        <button class="btn">Редактировать</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+			<div class="uptable">
+  <div class="tablehead ">
+  <div class="tablehead_inner">
+    <div class="row">
+      <div class="col-12  col-md-4">
+        <div class="tablehead_main">
+          <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
+          <div class="tablehead_title">Название альбома / сингла / EP</div>
+        </div>
+      </div>
+      <div class="col-12  col-md-8">
+        <div class="tablehead_entry">
+          <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
+          <div class="tablehead_entry_inner">
+            
+            <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
+            <div class="tablehead_cell lg_hide"><span>Дата релиза</span> 20.05.2021</div>
+            <div class="tablehead_cell xl_hide"><span>Дата начала продаж</span> 20.05.2021</div>
+            
+            <div class="tablehead_cell">
+              <button class="btn btn-drop js_tablehead_more" type="button">Треки <b>15</b></button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="tablehead_dots"></button>
+  <div class="dropdown">
+    <button class="tablehead_dots" data-bs-toggle="dropdown"></button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
+      <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
+      <li><a class="dropdown-item dropdown-info" href="#" data-bs-toggle="modal" data-bs-target="#info_release">Больше информации</a></li>
+      <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
+      <li><a class="dropdown-item dropdown-del" href="#" data-bs-toggle="modal" data-bs-target="#delete_release">Удалить релиз</a></li>
+    </ul>
+  </div>
+  
 </div><!-- /tablehead -->
+
 
   <div class="uptable_hide">
     <div class="tablemid">
@@ -436,14 +929,16 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">все прослушивания</div>
-        <div class="col-3">Платные прослушивания</div>
-        <div class="col-3">Заработано с релиза, руб.</div>
-        <div class="col-3"></div>
+        <div class="col-4">все прослушивания</div>
+        <div class="col-4">Платные прослушивания</div>
+        <div class="col-4">Заработано с релиза, руб.</div>
       </div>
     </div>
+    
+    
   </div>
 </div><!-- /tablemid -->
 
@@ -453,21 +948,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -476,21 +975,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -499,59 +1002,212 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
   </div>
 </div><!-- /uptable -->
-		<div class="uptable">
-  <div class="tablehead">
-  <div class="row">
-    <div class="col-12 col-md-4">
-      <div class="tablehead_main">
-        <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
-        <div class="tablehead_title">Название альбома / сингла / EP</div>
-        <a href="#" class="tablehead_show"></a>
+
+<div class="modal fade" id="delete_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Вы уверены, что хотите удалить релиз</div>
+			</div>
+      <div class="text-right">
+        <button class="btn btn-grey">Отмена</button>
+        <button class="btn">Удалить</button>
       </div>
     </div>
-    <div class="col-12 col-md-8">
-      <div class="tablehead_entry">
-        <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
-        <div class="tablehead_entry_inner">
-          <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
-          <div class="tablehead_cell"><span>Дата релиза</span> 20.05.2021</div>
-          <div class="tablehead_cell"><span>Дата начала продаж</span> 20.05.2021</div>
-          <div class="tablehead_cell">
-            <div class="dropdown">
-              <button class="btn btn-drop" type="button" data-bs-toggle="dropdown">Треки <b>15</b></button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
-                <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
-                <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
-                <li><a class="dropdown-item dropdown-del" href="#">Удалить релиз</a></li>
-              </ul>
+  </div>
+</div><!-- /modal -->
+
+<div class="modal fade" id="info_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Информация о релизе</div>
+			</div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Общие для альбома исполнители</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Жанры</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной жанр*</div>
+            <input type="text" class="form-control readonly" value="Rock" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный жанр</div>
+            <input type="text" class="form-control readonly" value="Metal" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Язык и языковые особенности</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Язык релиза*</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Язык метаданных</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Наименование лейбла, копирайт</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Pline</div>
+            <input type="text" class="form-control readonly" value="th.music" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Дополнительно</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Код UPC</div>
+            <input type="text" class="form-control readonly" value="-" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Промо</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Описание релиза</div>
+            <p>Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации форм развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Поддержка в соцсетях</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Комментарий для модератора</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <div class="row">
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Даты</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата релиза*</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.07.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата предзаказа</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.06.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата копирайта</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.05.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Продажи в TikTok</div>
+              <input type="text" class="form-control form-control-date readonly" value="18.05.2021 в 20:00" readonly>
+            </div>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+      <div class="text-right">
+        <button class="btn">Редактировать</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+			<div class="uptable">
+  <div class="tablehead ">
+  <div class="tablehead_inner">
+    <div class="row">
+      <div class="col-12  col-md-4">
+        <div class="tablehead_main">
+          <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
+          <div class="tablehead_title">Название альбома / сингла / EP</div>
+        </div>
+      </div>
+      <div class="col-12  col-md-8">
+        <div class="tablehead_entry">
+          <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
+          <div class="tablehead_entry_inner">
+            
+            <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
+            <div class="tablehead_cell lg_hide"><span>Дата релиза</span> 20.05.2021</div>
+            <div class="tablehead_cell xl_hide"><span>Дата начала продаж</span> 20.05.2021</div>
+            
+            <div class="tablehead_cell">
+              <button class="btn btn-drop js_tablehead_more" type="button">Треки <b>15</b></button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="tablehead_dots"></button>
+  <div class="dropdown">
+    <button class="tablehead_dots" data-bs-toggle="dropdown"></button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
+      <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
+      <li><a class="dropdown-item dropdown-info" href="#" data-bs-toggle="modal" data-bs-target="#info_release">Больше информации</a></li>
+      <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
+      <li><a class="dropdown-item dropdown-del" href="#" data-bs-toggle="modal" data-bs-target="#delete_release">Удалить релиз</a></li>
+    </ul>
+  </div>
+  
 </div><!-- /tablehead -->
+
 
   <div class="uptable_hide">
     <div class="tablemid">
@@ -560,14 +1216,16 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">все прослушивания</div>
-        <div class="col-3">Платные прослушивания</div>
-        <div class="col-3">Заработано с релиза, руб.</div>
-        <div class="col-3"></div>
+        <div class="col-4">все прослушивания</div>
+        <div class="col-4">Платные прослушивания</div>
+        <div class="col-4">Заработано с релиза, руб.</div>
       </div>
     </div>
+    
+    
   </div>
 </div><!-- /tablemid -->
 
@@ -577,21 +1235,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -600,21 +1262,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -623,59 +1289,212 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
   </div>
 </div><!-- /uptable -->
-		<div class="uptable">
-  <div class="tablehead">
-  <div class="row">
-    <div class="col-12 col-md-4">
-      <div class="tablehead_main">
-        <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
-        <div class="tablehead_title">Название альбома / сингла / EP</div>
-        <a href="#" class="tablehead_show"></a>
+
+<div class="modal fade" id="delete_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Вы уверены, что хотите удалить релиз</div>
+			</div>
+      <div class="text-right">
+        <button class="btn btn-grey">Отмена</button>
+        <button class="btn">Удалить</button>
       </div>
     </div>
-    <div class="col-12 col-md-8">
-      <div class="tablehead_entry">
-        <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
-        <div class="tablehead_entry_inner">
-          <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
-          <div class="tablehead_cell"><span>Дата релиза</span> 20.05.2021</div>
-          <div class="tablehead_cell"><span>Дата начала продаж</span> 20.05.2021</div>
-          <div class="tablehead_cell">
-            <div class="dropdown">
-              <button class="btn btn-drop" type="button" data-bs-toggle="dropdown">Треки <b>15</b></button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
-                <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
-                <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
-                <li><a class="dropdown-item dropdown-del" href="#">Удалить релиз</a></li>
-              </ul>
+  </div>
+</div><!-- /modal -->
+
+<div class="modal fade" id="info_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Информация о релизе</div>
+			</div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Общие для альбома исполнители</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Жанры</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной жанр*</div>
+            <input type="text" class="form-control readonly" value="Rock" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный жанр</div>
+            <input type="text" class="form-control readonly" value="Metal" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Язык и языковые особенности</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Язык релиза*</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Язык метаданных</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Наименование лейбла, копирайт</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Pline</div>
+            <input type="text" class="form-control readonly" value="th.music" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Дополнительно</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Код UPC</div>
+            <input type="text" class="form-control readonly" value="-" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Промо</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Описание релиза</div>
+            <p>Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации форм развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Поддержка в соцсетях</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Комментарий для модератора</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <div class="row">
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Даты</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата релиза*</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.07.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата предзаказа</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.06.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата копирайта</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.05.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Продажи в TikTok</div>
+              <input type="text" class="form-control form-control-date readonly" value="18.05.2021 в 20:00" readonly>
+            </div>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+      <div class="text-right">
+        <button class="btn">Редактировать</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+			<div class="uptable">
+  <div class="tablehead ">
+  <div class="tablehead_inner">
+    <div class="row">
+      <div class="col-12  col-md-4">
+        <div class="tablehead_main">
+          <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
+          <div class="tablehead_title">Название альбома / сингла / EP</div>
+        </div>
+      </div>
+      <div class="col-12  col-md-8">
+        <div class="tablehead_entry">
+          <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
+          <div class="tablehead_entry_inner">
+            
+            <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
+            <div class="tablehead_cell lg_hide"><span>Дата релиза</span> 20.05.2021</div>
+            <div class="tablehead_cell xl_hide"><span>Дата начала продаж</span> 20.05.2021</div>
+            
+            <div class="tablehead_cell">
+              <button class="btn btn-drop js_tablehead_more" type="button">Треки <b>15</b></button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="tablehead_dots"></button>
+  <div class="dropdown">
+    <button class="tablehead_dots" data-bs-toggle="dropdown"></button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
+      <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
+      <li><a class="dropdown-item dropdown-info" href="#" data-bs-toggle="modal" data-bs-target="#info_release">Больше информации</a></li>
+      <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
+      <li><a class="dropdown-item dropdown-del" href="#" data-bs-toggle="modal" data-bs-target="#delete_release">Удалить релиз</a></li>
+    </ul>
+  </div>
+  
 </div><!-- /tablehead -->
+
 
   <div class="uptable_hide">
     <div class="tablemid">
@@ -684,14 +1503,16 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">все прослушивания</div>
-        <div class="col-3">Платные прослушивания</div>
-        <div class="col-3">Заработано с релиза, руб.</div>
-        <div class="col-3"></div>
+        <div class="col-4">все прослушивания</div>
+        <div class="col-4">Платные прослушивания</div>
+        <div class="col-4">Заработано с релиза, руб.</div>
       </div>
     </div>
+    
+    
   </div>
 </div><!-- /tablemid -->
 
@@ -701,21 +1522,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -724,21 +1549,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -747,59 +1576,212 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
   </div>
 </div><!-- /uptable -->
-		<div class="uptable">
-  <div class="tablehead">
-  <div class="row">
-    <div class="col-12 col-md-4">
-      <div class="tablehead_main">
-        <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
-        <div class="tablehead_title">Название альбома / сингла / EP</div>
-        <a href="#" class="tablehead_show"></a>
+
+<div class="modal fade" id="delete_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Вы уверены, что хотите удалить релиз</div>
+			</div>
+      <div class="text-right">
+        <button class="btn btn-grey">Отмена</button>
+        <button class="btn">Удалить</button>
       </div>
     </div>
-    <div class="col-12 col-md-8">
-      <div class="tablehead_entry">
-        <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
-        <div class="tablehead_entry_inner">
-          <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
-          <div class="tablehead_cell"><span>Дата релиза</span> 20.05.2021</div>
-          <div class="tablehead_cell"><span>Дата начала продаж</span> 20.05.2021</div>
-          <div class="tablehead_cell">
-            <div class="dropdown">
-              <button class="btn btn-drop" type="button" data-bs-toggle="dropdown">Треки <b>15</b></button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
-                <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
-                <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
-                <li><a class="dropdown-item dropdown-del" href="#">Удалить релиз</a></li>
-              </ul>
+  </div>
+</div><!-- /modal -->
+
+<div class="modal fade" id="info_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Информация о релизе</div>
+			</div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Общие для альбома исполнители</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Жанры</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной жанр*</div>
+            <input type="text" class="form-control readonly" value="Rock" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный жанр</div>
+            <input type="text" class="form-control readonly" value="Metal" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Язык и языковые особенности</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Язык релиза*</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Язык метаданных</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Наименование лейбла, копирайт</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Pline</div>
+            <input type="text" class="form-control readonly" value="th.music" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Дополнительно</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Код UPC</div>
+            <input type="text" class="form-control readonly" value="-" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Промо</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Описание релиза</div>
+            <p>Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации форм развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Поддержка в соцсетях</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Комментарий для модератора</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <div class="row">
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Даты</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата релиза*</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.07.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата предзаказа</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.06.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата копирайта</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.05.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Продажи в TikTok</div>
+              <input type="text" class="form-control form-control-date readonly" value="18.05.2021 в 20:00" readonly>
+            </div>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+      <div class="text-right">
+        <button class="btn">Редактировать</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+			<div class="uptable">
+  <div class="tablehead ">
+  <div class="tablehead_inner">
+    <div class="row">
+      <div class="col-12  col-md-4">
+        <div class="tablehead_main">
+          <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
+          <div class="tablehead_title">Название альбома / сингла / EP</div>
+        </div>
+      </div>
+      <div class="col-12  col-md-8">
+        <div class="tablehead_entry">
+          <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
+          <div class="tablehead_entry_inner">
+            
+            <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
+            <div class="tablehead_cell lg_hide"><span>Дата релиза</span> 20.05.2021</div>
+            <div class="tablehead_cell xl_hide"><span>Дата начала продаж</span> 20.05.2021</div>
+            
+            <div class="tablehead_cell">
+              <button class="btn btn-drop js_tablehead_more" type="button">Треки <b>15</b></button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="tablehead_dots"></button>
+  <div class="dropdown">
+    <button class="tablehead_dots" data-bs-toggle="dropdown"></button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
+      <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
+      <li><a class="dropdown-item dropdown-info" href="#" data-bs-toggle="modal" data-bs-target="#info_release">Больше информации</a></li>
+      <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
+      <li><a class="dropdown-item dropdown-del" href="#" data-bs-toggle="modal" data-bs-target="#delete_release">Удалить релиз</a></li>
+    </ul>
+  </div>
+  
 </div><!-- /tablehead -->
+
 
   <div class="uptable_hide">
     <div class="tablemid">
@@ -808,14 +1790,16 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">все прослушивания</div>
-        <div class="col-3">Платные прослушивания</div>
-        <div class="col-3">Заработано с релиза, руб.</div>
-        <div class="col-3"></div>
+        <div class="col-4">все прослушивания</div>
+        <div class="col-4">Платные прослушивания</div>
+        <div class="col-4">Заработано с релиза, руб.</div>
       </div>
     </div>
+    
+    
   </div>
 </div><!-- /tablemid -->
 
@@ -825,21 +1809,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -848,21 +1836,25 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
     <div class="tableline">
@@ -871,153 +1863,551 @@
       <div class="tablemid_first">Название композиции</div>
     </div>
     <div class="col-3">Исполнитель</div>
+    
+    
     <div class="col-6">
       <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
-          </div>
-        </div>
+        <div class="col-4">675</div>
+        <div class="col-4">675</div>
+        <div class="col-4">12 773</div>
       </div>
     </div>
+    
+    
   </div>
+  
+  <div class="tableline_btns">
+    <button class="btn-play"></button>
+    <button class="btn-load"></button>
+    <button class="btn-users"></button>
+  </div>
+  
 </div><!-- /tableline -->
 
   </div>
 </div><!-- /uptable -->
-		<div class="uptable">
-  <div class="tablehead">
-  <div class="row">
-    <div class="col-12 col-md-4">
-      <div class="tablehead_main">
-        <div class="tablehead_img"><img src="images/svg/chess.svg" alt=""></div>
-        <div class="tablehead_title">Название альбома / сингла / EP</div>
-        <a href="#" class="tablehead_show"></a>
+
+<div class="modal fade" id="delete_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Вы уверены, что хотите удалить релиз</div>
+			</div>
+      <div class="text-right">
+        <button class="btn btn-grey">Отмена</button>
+        <button class="btn">Удалить</button>
       </div>
     </div>
-    <div class="col-12 col-md-8">
-      <div class="tablehead_entry">
-        <div class="tablehead_cell"><span>Испольнитель</span> Название исполнителя</div>
-        <div class="tablehead_entry_inner">
-          <div class="tablehead_cell"><span>UPC</span> 5057827637884</div>
-          <div class="tablehead_cell"><span>Дата релиза</span> 20.05.2021</div>
-          <div class="tablehead_cell"><span>Дата начала продаж</span> 20.05.2021</div>
-          <div class="tablehead_cell">
-            <div class="dropdown">
-              <button class="btn btn-drop" type="button" data-bs-toggle="dropdown">Треки <b>15</b></button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
-                <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
-                <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
-                <li><a class="dropdown-item dropdown-del" href="#">Удалить релиз</a></li>
-              </ul>
+  </div>
+</div><!-- /modal -->
+
+<div class="modal fade" id="info_release" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Информация о релизе</div>
+			</div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Общие для альбома исполнители</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный исполнитель*</div>
+            <input type="text" class="form-control readonly" value="Имя исполнителя" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Жанры</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Основной жанр*</div>
+            <input type="text" class="form-control readonly" value="Rock" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Дополнительный жанр</div>
+            <input type="text" class="form-control readonly" value="Metal" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Язык и языковые особенности</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Язык релиза*</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Язык метаданных</div>
+            <input type="text" class="form-control readonly" value="English" readonly>
+          </div>
+        </div><!-- /col -->
+        
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Наименование лейбла, копирайт</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Pline</div>
+            <input type="text" class="form-control readonly" value="th.music" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 col-sm-6 col-xxl-4 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Дополнительно</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Код UPC</div>
+            <input type="text" class="form-control readonly" value="-" readonly>
+          </div>
+        </div><!-- /col -->
+
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Промо</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="form-line">
+            <div class="form-label light_text">Описание релиза</div>
+            <p>Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации форм развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Поддержка в соцсетях</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+          <div class="form-line">
+            <div class="form-label light_text">Комментарий для модератора</div>
+            <p>Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+      <div class="row">
+        <div class="col-12 js_edit_fields_wrap">
+          <div class="line_title">
+            <h5>Даты</h5>
+            <button class="btn-edit js_edit_fields"></button>
+          </div><!-- /line_title -->
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата релиза*</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.07.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата предзаказа</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.06.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Дата копирайта</div>
+              <input type="text" class="form-control form-control-date readonly" value="20.05.2021" readonly>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 form-line">
+              <div class="form-label light_text">Продажи в TikTok</div>
+              <input type="text" class="form-control form-control-date readonly" value="18.05.2021 в 20:00" readonly>
             </div>
           </div>
-        </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+      <div class="text-right">
+        <button class="btn">Редактировать</button>
       </div>
     </div>
   </div>
-  <button class="tablehead_dots"></button>
-</div><!-- /tablehead -->
+</div><!-- /modal -->
+		</div><!-- /uptable_body -->
 
-  <div class="uptable_hide">
-    <div class="tablemid">
-  <div class="row">
-    <div class="col-3">
-      <div class="tablemid_first">Название композиции</div>
-    </div>
-    <div class="col-3">Исполнитель</div>
-    <div class="col-6">
-      <div class="row">
-        <div class="col-3">все прослушивания</div>
-        <div class="col-3">Платные прослушивания</div>
-        <div class="col-3">Заработано с релиза, руб.</div>
-        <div class="col-3"></div>
-      </div>
-    </div>
-  </div>
-</div><!-- /tablemid -->
 
-    <div class="tableline">
-  <div class="row">
-    <div class="col-3">
-      <div class="tablemid_first">Название композиции</div>
+
+		<div class="show_mobile">
+			<div class="sm_uptable">
+  <div class="sm_uptable_head">
+    <div class="sm_uptable_head_img"><img src="images/svg/chess.svg" alt=""></div>
+    <div class="sm_uptable_head_title">Название альбома / сингла / EP</div>
+    <div class="dropdown sm_uptable_more">
+      <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
+        <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
+        <li><a class="dropdown-item dropdown-info" href="#">Больше информации</a></li>
+        <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
+        <li><a class="dropdown-item dropdown-del" href="#">Удалить релиз</a></li>
+      </ul>
     </div>
-    <div class="col-3">Исполнитель</div>
-    <div class="col-6">
-      <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
+  </div><!-- /sm_uptable_head -->
+
+  <div class="sm_uptable_content">
+    <div class="sm_uptable_inner">
+      
+      <ul class="sm_uptable_feat">
+        <li><div class="sm_uptable_feat_key">Исполнитель</div> <div class="sm_uptable_feat_val">Название исполнителя</div> </li>
+        <li><div class="sm_uptable_feat_key">UPC</div> <div class="sm_uptable_feat_val">5057827637884</div></li>
+        <li><div class="sm_uptable_feat_key">Дата релиза</div> <div class="sm_uptable_feat_val">20.05.2021</div> </li>
+        <li><div class="sm_uptable_feat_key">Дата начала продаж</div> <div class="sm_uptable_feat_val">20.05.2021</div> </li>
+      </ul>
+      <ul class="sm_uptable_feat sm_uptable_feat-hide">
+        <li><div class="sm_uptable_feat_key">Основной жанр</div> <div class="sm_uptable_feat_val">Rock</div></li>
+        <li><div class="sm_uptable_feat_key">Дополнительный жанр</div> <div class="sm_uptable_feat_val">Metal</div></li>
+        <li><div class="sm_uptable_feat_key">Язык релиза</div> <div class="sm_uptable_feat_val">English</div></li>
+        <li><div class="sm_uptable_feat_key">Язык метаданных</div> <div class="sm_uptable_feat_val">English</div></li>
+        <li><div class="sm_uptable_feat_key">Ненормативная лексика</div> <div class="sm_uptable_feat_val">Нет</div></li>
+        <li><div class="sm_uptable_feat_key">Автор музыки</div> <div class="sm_uptable_feat_val">Константинопольский Константин</div></li>
+        <li><div class="sm_uptable_feat_key">Площадки</div> <div class="sm_uptable_feat_val">ВКонтакте,  Яндекс.Музыка, Spotify, Одноклассники, AppleMusic</div></li>
+      </ul>
+      <a href="#" class="sm_uptable_feat_more">Показать больше информации</a>
+    </div>
+
+    <a href="#" class="sm_uptable_showtracks">Треки <b>15</b></a>
+
+    <div class="sm_uptable_tracks">
+      <div class="sm_uptable_track">
+        <div class="sm_uptable_track_inner">
+          <div class="sm_uptable_track_title">Название композиции</div>
+          <div class="sm_uptable_track_icons">
+            <div class="dropdown dropdown_icon">
+              <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-pen" href="#">Прослушать</a></li>
+                <li><a class="dropdown-item dropdown-up" href="#">Скачать</a></li>
+                <li><a class="dropdown-item dropdown-copy" href="#">Показать фанатов</a></li>
+              </ul>
+            </div>
+            <a href="#" class="sm_uptable_track_info" data-bs-toggle="modal" data-bs-target=".info_popup"></a>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div><!-- /tableline -->
+        
+      </div><!-- /sm_uptable_track -->
 
-    <div class="tableline">
-  <div class="row">
-    <div class="col-3">
-      <div class="tablemid_first">Название композиции</div>
-    </div>
-    <div class="col-3">Исполнитель</div>
-    <div class="col-6">
-      <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
+      <div class="sm_uptable_track">
+        <div class="sm_uptable_track_inner">
+          <div class="sm_uptable_track_title">Название композиции</div>
+          <div class="sm_uptable_track_icons">
+            <div class="dropdown dropdown_icon">
+              <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-pen" href="#">Прослушать</a></li>
+                <li><a class="dropdown-item dropdown-up" href="#">Скачать</a></li>
+                <li><a class="dropdown-item dropdown-copy" href="#">Показать фанатов</a></li>
+              </ul>
+            </div>
+            <a href="#" class="sm_uptable_track_info" data-bs-toggle="modal" data-bs-target=".info_popup"></a>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div><!-- /tableline -->
-
-    <div class="tableline">
-  <div class="row">
-    <div class="col-3">
-      <div class="tablemid_first">Название композиции</div>
-    </div>
-    <div class="col-3">Исполнитель</div>
-    <div class="col-6">
-      <div class="row">
-        <div class="col-3">675</div>
-        <div class="col-3">675</div>
-        <div class="col-3">12 773</div>
-        <div class="col-3">
-          <div class="tableline_btns">
-            <button class="btn-play"></button>
-            <button class="btn-load"></button>
-            <button class="btn-users"></button>
+      </div><!-- /sm_uptable_track -->
+      
+      <div class="sm_uptable_track">
+        <div class="sm_uptable_track_inner">
+          <div class="sm_uptable_track_title">Название композиции</div>
+          <div class="sm_uptable_track_icons">
+            <div class="dropdown dropdown_icon">
+              <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-pen" href="#">Прослушать</a></li>
+                <li><a class="dropdown-item dropdown-up" href="#">Скачать</a></li>
+                <li><a class="dropdown-item dropdown-copy" href="#">Показать фанатов</a></li>
+              </ul>
+            </div>
+            <a href="#" class="sm_uptable_track_info" data-bs-toggle="modal" data-bs-target=".info_popup"></a>
           </div>
         </div>
-      </div>
+      </div><!-- /sm_uptable_track -->
+    </div><!-- /sm_uptable_tracks -->
+  </div><!-- /sm_uptable_content -->
+</div><!-- /sm_uptable -->
+
+
+<div class="modal fade info_popup" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Название композиции</div>
+			</div>
+      <ul class="sm_uptable_feat">
+        <li><div class="sm_uptable_feat_key">Исполнитель</div> <div class="sm_uptable_feat_val">Название исполнителя</div> </li>
+        <li><div class="sm_uptable_feat_key">Длительность</div> <div class="sm_uptable_feat_val">02:34</div></li>
+        <li><div class="sm_uptable_feat_key">Все прослушивания</div> <div class="sm_uptable_feat_val">10 963</div> </li>
+        <li><div class="sm_uptable_feat_key">Платные прослушивания</div> <div class="sm_uptable_feat_val">4 993</div> </li>
+        <li><div class="sm_uptable_feat_key">Заработано с релиза, руб.</div> <div class="sm_uptable_feat_val">207 563</div> </li>
+      </ul>
     </div>
   </div>
-</div><!-- /tableline -->
+</div><!-- /modal -->
+			<div class="sm_uptable">
+  <div class="sm_uptable_head">
+    <div class="sm_uptable_head_img"><img src="images/svg/chess.svg" alt=""></div>
+    <div class="sm_uptable_head_title">Название альбома / сингла / EP</div>
+    <div class="dropdown sm_uptable_more">
+      <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
+        <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
+        <li><a class="dropdown-item dropdown-info" href="#">Больше информации</a></li>
+        <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
+        <li><a class="dropdown-item dropdown-del" href="#">Удалить релиз</a></li>
+      </ul>
+    </div>
+  </div><!-- /sm_uptable_head -->
 
+  <div class="sm_uptable_content">
+    <div class="sm_uptable_inner">
+      
+      <div class="tablehead_error">
+        <div class="tablehead_error_title">Причина отклонения</div>
+        <p>Не указано наличие ненормативной лексики в одной из композиций. <a href="#" data-bs-toggle="modal" data-bs-target="#reason_reject">Подробнее</a></p>
+      </div>
+      
+      <ul class="sm_uptable_feat">
+        <li><div class="sm_uptable_feat_key">Исполнитель</div> <div class="sm_uptable_feat_val">Название исполнителя</div> </li>
+        <li><div class="sm_uptable_feat_key">UPC</div> <div class="sm_uptable_feat_val">5057827637884</div></li>
+        <li><div class="sm_uptable_feat_key">Дата релиза</div> <div class="sm_uptable_feat_val">20.05.2021</div> </li>
+        <li><div class="sm_uptable_feat_key">Дата начала продаж</div> <div class="sm_uptable_feat_val">20.05.2021</div> </li>
+      </ul>
+      <ul class="sm_uptable_feat sm_uptable_feat-hide">
+        <li><div class="sm_uptable_feat_key">Основной жанр</div> <div class="sm_uptable_feat_val">Rock</div></li>
+        <li><div class="sm_uptable_feat_key">Дополнительный жанр</div> <div class="sm_uptable_feat_val">Metal</div></li>
+        <li><div class="sm_uptable_feat_key">Язык релиза</div> <div class="sm_uptable_feat_val">English</div></li>
+        <li><div class="sm_uptable_feat_key">Язык метаданных</div> <div class="sm_uptable_feat_val">English</div></li>
+        <li><div class="sm_uptable_feat_key">Ненормативная лексика</div> <div class="sm_uptable_feat_val">Нет</div></li>
+        <li><div class="sm_uptable_feat_key">Автор музыки</div> <div class="sm_uptable_feat_val">Константинопольский Константин</div></li>
+        <li><div class="sm_uptable_feat_key">Площадки</div> <div class="sm_uptable_feat_val">ВКонтакте,  Яндекс.Музыка, Spotify, Одноклассники, AppleMusic</div></li>
+      </ul>
+      <a href="#" class="sm_uptable_feat_more">Показать больше информации</a>
+    </div>
+
+    <a href="#" class="sm_uptable_showtracks">Треки <b>15</b></a>
+
+    <div class="sm_uptable_tracks">
+      <div class="sm_uptable_track">
+        <div class="sm_uptable_track_inner">
+          <div class="sm_uptable_track_title">Название композиции</div>
+          <div class="sm_uptable_track_icons">
+            <div class="dropdown dropdown_icon">
+              <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-pen" href="#">Прослушать</a></li>
+                <li><a class="dropdown-item dropdown-up" href="#">Скачать</a></li>
+                <li><a class="dropdown-item dropdown-copy" href="#">Показать фанатов</a></li>
+              </ul>
+            </div>
+            <a href="#" class="sm_uptable_track_info" data-bs-toggle="modal" data-bs-target=".info_popup"></a>
+          </div>
+        </div>
+        <div class="tablehead_error">Не указано наличие ненормативной лексики</div>
+      </div><!-- /sm_uptable_track -->
+
+      <div class="sm_uptable_track">
+        <div class="sm_uptable_track_inner">
+          <div class="sm_uptable_track_title">Название композиции</div>
+          <div class="sm_uptable_track_icons">
+            <div class="dropdown dropdown_icon">
+              <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-pen" href="#">Прослушать</a></li>
+                <li><a class="dropdown-item dropdown-up" href="#">Скачать</a></li>
+                <li><a class="dropdown-item dropdown-copy" href="#">Показать фанатов</a></li>
+              </ul>
+            </div>
+            <a href="#" class="sm_uptable_track_info" data-bs-toggle="modal" data-bs-target=".info_popup"></a>
+          </div>
+        </div>
+      </div><!-- /sm_uptable_track -->
+      
+      <div class="sm_uptable_track">
+        <div class="sm_uptable_track_inner">
+          <div class="sm_uptable_track_title">Название композиции</div>
+          <div class="sm_uptable_track_icons">
+            <div class="dropdown dropdown_icon">
+              <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-pen" href="#">Прослушать</a></li>
+                <li><a class="dropdown-item dropdown-up" href="#">Скачать</a></li>
+                <li><a class="dropdown-item dropdown-copy" href="#">Показать фанатов</a></li>
+              </ul>
+            </div>
+            <a href="#" class="sm_uptable_track_info" data-bs-toggle="modal" data-bs-target=".info_popup"></a>
+          </div>
+        </div>
+      </div><!-- /sm_uptable_track -->
+    </div><!-- /sm_uptable_tracks -->
+  </div><!-- /sm_uptable_content -->
+</div><!-- /sm_uptable -->
+
+
+<div class="modal fade info_popup" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Название композиции</div>
+			</div>
+      <ul class="sm_uptable_feat">
+        <li><div class="sm_uptable_feat_key">Исполнитель</div> <div class="sm_uptable_feat_val">Название исполнителя</div> </li>
+        <li><div class="sm_uptable_feat_key">Длительность</div> <div class="sm_uptable_feat_val">02:34</div></li>
+        <li><div class="sm_uptable_feat_key">Все прослушивания</div> <div class="sm_uptable_feat_val">10 963</div> </li>
+        <li><div class="sm_uptable_feat_key">Платные прослушивания</div> <div class="sm_uptable_feat_val">4 993</div> </li>
+        <li><div class="sm_uptable_feat_key">Заработано с релиза, руб.</div> <div class="sm_uptable_feat_val">207 563</div> </li>
+      </ul>
+    </div>
   </div>
-</div><!-- /uptable -->
+</div><!-- /modal -->
+			<div class="sm_uptable">
+  <div class="sm_uptable_head">
+    <div class="sm_uptable_head_img"><img src="images/svg/chess.svg" alt=""></div>
+    <div class="sm_uptable_head_title">Название альбома / сингла / EP</div>
+    <div class="dropdown sm_uptable_more">
+      <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item dropdown-pen" href="#">Редактировать</a></li>
+        <li><a class="dropdown-item dropdown-up" href="#">Продвинуть</a></li>
+        <li><a class="dropdown-item dropdown-info" href="#">Больше информации</a></li>
+        <li><a class="dropdown-item dropdown-copy" href="#">Копировать релиз</a></li>
+        <li><a class="dropdown-item dropdown-del" href="#">Удалить релиз</a></li>
+      </ul>
+    </div>
+  </div><!-- /sm_uptable_head -->
+
+  <div class="sm_uptable_content">
+    <div class="sm_uptable_inner">
+      
+      <ul class="sm_uptable_feat">
+        <li><div class="sm_uptable_feat_key">Исполнитель</div> <div class="sm_uptable_feat_val">Название исполнителя</div> </li>
+        <li><div class="sm_uptable_feat_key">UPC</div> <div class="sm_uptable_feat_val">5057827637884</div></li>
+        <li><div class="sm_uptable_feat_key">Дата релиза</div> <div class="sm_uptable_feat_val">20.05.2021</div> </li>
+        <li><div class="sm_uptable_feat_key">Дата начала продаж</div> <div class="sm_uptable_feat_val">20.05.2021</div> </li>
+      </ul>
+      <ul class="sm_uptable_feat sm_uptable_feat-hide">
+        <li><div class="sm_uptable_feat_key">Основной жанр</div> <div class="sm_uptable_feat_val">Rock</div></li>
+        <li><div class="sm_uptable_feat_key">Дополнительный жанр</div> <div class="sm_uptable_feat_val">Metal</div></li>
+        <li><div class="sm_uptable_feat_key">Язык релиза</div> <div class="sm_uptable_feat_val">English</div></li>
+        <li><div class="sm_uptable_feat_key">Язык метаданных</div> <div class="sm_uptable_feat_val">English</div></li>
+        <li><div class="sm_uptable_feat_key">Ненормативная лексика</div> <div class="sm_uptable_feat_val">Нет</div></li>
+        <li><div class="sm_uptable_feat_key">Автор музыки</div> <div class="sm_uptable_feat_val">Константинопольский Константин</div></li>
+        <li><div class="sm_uptable_feat_key">Площадки</div> <div class="sm_uptable_feat_val">ВКонтакте,  Яндекс.Музыка, Spotify, Одноклассники, AppleMusic</div></li>
+      </ul>
+      <a href="#" class="sm_uptable_feat_more">Показать больше информации</a>
+    </div>
+
+    <a href="#" class="sm_uptable_showtracks">Треки <b>15</b></a>
+
+    <div class="sm_uptable_tracks">
+      <div class="sm_uptable_track">
+        <div class="sm_uptable_track_inner">
+          <div class="sm_uptable_track_title">Название композиции</div>
+          <div class="sm_uptable_track_icons">
+            <div class="dropdown dropdown_icon">
+              <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-pen" href="#">Прослушать</a></li>
+                <li><a class="dropdown-item dropdown-up" href="#">Скачать</a></li>
+                <li><a class="dropdown-item dropdown-copy" href="#">Показать фанатов</a></li>
+              </ul>
+            </div>
+            <a href="#" class="sm_uptable_track_info" data-bs-toggle="modal" data-bs-target=".info_popup"></a>
+          </div>
+        </div>
+        
+      </div><!-- /sm_uptable_track -->
+
+      <div class="sm_uptable_track">
+        <div class="sm_uptable_track_inner">
+          <div class="sm_uptable_track_title">Название композиции</div>
+          <div class="sm_uptable_track_icons">
+            <div class="dropdown dropdown_icon">
+              <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-pen" href="#">Прослушать</a></li>
+                <li><a class="dropdown-item dropdown-up" href="#">Скачать</a></li>
+                <li><a class="dropdown-item dropdown-copy" href="#">Показать фанатов</a></li>
+              </ul>
+            </div>
+            <a href="#" class="sm_uptable_track_info" data-bs-toggle="modal" data-bs-target=".info_popup"></a>
+          </div>
+        </div>
+      </div><!-- /sm_uptable_track -->
+      
+      <div class="sm_uptable_track">
+        <div class="sm_uptable_track_inner">
+          <div class="sm_uptable_track_title">Название композиции</div>
+          <div class="sm_uptable_track_icons">
+            <div class="dropdown dropdown_icon">
+              <button class="sm_uptable_track_more" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-pen" href="#">Прослушать</a></li>
+                <li><a class="dropdown-item dropdown-up" href="#">Скачать</a></li>
+                <li><a class="dropdown-item dropdown-copy" href="#">Показать фанатов</a></li>
+              </ul>
+            </div>
+            <a href="#" class="sm_uptable_track_info" data-bs-toggle="modal" data-bs-target=".info_popup"></a>
+          </div>
+        </div>
+      </div><!-- /sm_uptable_track -->
+    </div><!-- /sm_uptable_tracks -->
+  </div><!-- /sm_uptable_content -->
+</div><!-- /sm_uptable -->
+
+
+<div class="modal fade info_popup" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Название композиции</div>
+			</div>
+      <ul class="sm_uptable_feat">
+        <li><div class="sm_uptable_feat_key">Исполнитель</div> <div class="sm_uptable_feat_val">Название исполнителя</div> </li>
+        <li><div class="sm_uptable_feat_key">Длительность</div> <div class="sm_uptable_feat_val">02:34</div></li>
+        <li><div class="sm_uptable_feat_key">Все прослушивания</div> <div class="sm_uptable_feat_val">10 963</div> </li>
+        <li><div class="sm_uptable_feat_key">Платные прослушивания</div> <div class="sm_uptable_feat_val">4 993</div> </li>
+        <li><div class="sm_uptable_feat_key">Заработано с релиза, руб.</div> <div class="sm_uptable_feat_val">207 563</div> </li>
+      </ul>
+    </div>
+  </div>
+</div><!-- /modal -->
+		</div><!-- /show_mobile -->
     
 
 	</div><!-- /mainwrap_content -->
 </div><!-- /mainwrap -->
+
+<div class="modal fade" id="reason_reject" data-bs-keyboard="true" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			<div class="modal-header block">
+				<div class="modal-title">Причина отклонения</div>
+			</div>
+      <p>Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации форм развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+      <p>Задача организации, в особенности же постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели развития. С другой стороны укрепление и развитие структуры позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Таким образом новая модель организационной деятельности позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности требуют от нас анализа новых предложений.</p>
+      <div class="form-line last">
+        <div class="infobox infobox-popup">
+  
+  <div class="infobox_title">Как исправить</div>
+  Таким образом новая модель организационной деятельности позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности требуют от нас анализа новых предложений.
+</div>
+
+      </div>
+      <div class="text-right mobile_btns_modal">
+        <button class="btn btn-grey">Обжаловать решение</button>
+        <button class="btn">Редактировать релиз</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
 
 
 <div class="modal fade" id="uploadDemo" data-bs-keyboard="true" tabindex="-1">
@@ -1097,9 +2487,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ru.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>

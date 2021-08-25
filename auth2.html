@@ -9,8 +9,7 @@
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/style/jquery.jscrollpane.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
@@ -26,34 +25,36 @@
   <div class="auth_container_logo">
     <a href="#"><img src="images/svg/logo2.svg" alt=""></a>
   </div>
+  <div class="auth_container_content">
 
-  <div class="modal-content">
-    <div class="modal-header last">
-      <div class="modal-title">Создание нового аккаунта</div>
+    <div class="modal-content">
+      <div class="modal-header last">
+        <div class="modal-title">Создание нового аккаунта</div>
+      </div>
+      <p>Указанный номер <b>+7912 345 94-00</b> не зарегистрирован в системе. Если вы просто ошиблись в написании, нажмите <a href="#">изменить</a>.<br> Если номер верный, продолжите регистрацию нового аккаунта.</p>
+      <form action="#" method="POST">
+        <div class="form-line">
+          <label class="form-label">Пароль</label>
+          <div class="form-control-pass">
+            <input type="password" class="form-control">
+            <button type="button" class="form-control-pass-btn"></button>
+          </div>
+        </div>
+        <div class="form-line last">
+          <label class="form-label">Повторите пароль</label>
+          <div class="form-control-pass">
+            <input type="password" class="form-control">
+            <button type="button" class="form-control-pass-btn"></button>
+          </div>
+        </div>
+        <div class="form-line last">
+          <button class="btn btn-block">Готово</button>
+        </div>
+        <div class="modal-footer">Нажимая <b>Готово</b>, я соглашаюсь с <a href="#">публичной офертой</a> и условиями <a href="#">обработки персональных данных</a>.</div>
+      </form>
     </div>
-    <p>Указанный номер <b>+7912 345 94-00</b> не зарегистрирован в системе. Если вы просто ошиблись в написании, нажмите <a href="#">изменить</a>.<br> Если номер верный, продолжите регистрацию нового аккаунта.</p>
-    <form action="#" method="POST">
-      <div class="form-line">
-        <label class="form-label">Пароль</label>
-        <div class="form-control-pass">
-          <input type="password" class="form-control">
-          <button type="button" class="form-control-pass-btn"></button>
-        </div>
-      </div>
-      <div class="form-line last">
-        <label class="form-label">Повторите пароль</label>
-        <div class="form-control-pass">
-          <input type="password" class="form-control">
-          <button type="button" class="form-control-pass-btn"></button>
-        </div>
-      </div>
-      <div class="form-line last">
-        <button class="btn btn-block">Готово</button>
-      </div>
-      <div class="modal-footer">Нажимая <b>Готово</b>, я соглашаюсь с <a href="#">публичной офертой</a> и условиями <a href="#">обработки персональных данных</a>.</div>
-    </form>
-  </div>
 
+  </div><!-- /auth_container_content -->
 </div><!-- /auth_container -->
 
 
@@ -64,9 +65,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ru.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>
