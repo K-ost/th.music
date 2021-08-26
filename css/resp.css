@@ -4,6 +4,11 @@
   /* notification */
   .notification_header .search {
     margin-left: 24px; }
+  /* pagehead */
+  .pagehead {
+    display: block; }
+  .pagehead h2 {
+    margin: 0 0 16px; }
   /* uploads_search */
   .uploads_search .nav {
     margin-bottom: 24px; }
@@ -114,13 +119,11 @@
     display: block; }
   .wrapper:not(.wrapper-nobg) {
     padding: 16px; }
+  /* .wrapper-single */
+  .mainwrap_content .wrapper-single {
+    border-radius: 10px; }
   .chartHeight {
     min-height: 300px; }
-  /* pagehead */
-  .pagehead {
-    display: block; }
-  .pagehead h2 {
-    margin: 0 0 16px; }
   /* history_funds_head */
   .history_funds {
     border-top: 1px solid #f5f5f5; }

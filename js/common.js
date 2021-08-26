@@ -237,6 +237,39 @@ $(function() {
 		handle: '.addedfile_drag'
 	});
 	$('#sortable').disableSelection();
+
+
+	// date range
+	$('input[name="dates_range"]').daterangepicker({
+		autoUpdateInput: false,
+		"autoApply": true,
+		"locale": {
+			"format": "DD.MM.YYYY",
+			"separator": " - ",
+			"applyLabel": "Ok",
+			"cancelLabel": "Отмена",
+			"fromLabel": "От",
+			"toLabel": "До",
+			"customRangeLabel": "Custom",
+			"weekLabel": "W",
+			"daysOfWeek": [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+			"monthNames": [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+			"firstDay": 1
+		},
+		"drops": "auto",
+		"applyButtonClasses": "btn",
+		"cancelClass": "btn-grey",
+	}, function(start, end, label) {
+		console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+	});
+
+	$('input[name="dates_range"]').on('apply.daterangepicker', function(ev, picker) {
+		$(this).val(picker.startDate.format('DD.MM.YYYY') + ' - ' + picker.endDate.format('DD.MM.YYYY'));
+	});
+	$('input[name="dates_range"]').on('cancel.daterangepicker', function(ev, picker) {
+		$(this).val('');
+	});
+		
 	
 
 });

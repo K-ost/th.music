@@ -1546,16 +1546,19 @@ body {
 
 .mainwrap_content {
   padding: 16px 24px;
-  height: calc(100vh - 78px);
+  height: calc(100vh - 72px);
   overflow: auto; }
-  .mainwrap_content-pb .column-flex-row {
-    min-height: 100%; }
-  .mainwrap_content-pb .column-flex {
-    display: flex;
-    flex: 1; }
-  .mainwrap_content-pb .wrapper-single {
-    margin: 0;
-    flex: 1; }
+  .mainwrap_content-pb {
+    padding-bottom: 0; }
+    .mainwrap_content-pb .column-flex-row {
+      min-height: 100%; }
+    .mainwrap_content-pb .column-flex {
+      display: flex;
+      flex: 1; }
+    .mainwrap_content-pb .wrapper-single {
+      margin: 0;
+      flex: 1;
+      border-radius: 10px 10px 0 0; }
 
 .navpanel {
   background: #14121E;
@@ -3022,8 +3025,8 @@ body {
     border-radius: 0;
     padding: 0;
     margin: 0 24px 0 0;
-    min-width: 120px;
-    max-width: 120px;
+    min-width: 166px;
+    max-width: 166px;
     position: relative; }
     .filter_wrapper .form-control::placeholder {
       color: #14121E; }
