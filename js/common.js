@@ -219,6 +219,14 @@ $(function() {
 	$('.js_clonerow').on('click', function() {
 		let div = $('body').find('.clone_div').html();
 		$(this).closest('.row').before(div);
+		$('.form-control-date').datetimepicker({
+			locale: 'ru',
+			format: 'DD.MM.YYYY'
+		});
+		$('.form-control-time').datetimepicker({
+			locale: 'ru',
+			format: 'LT'
+		});
 		return false;
 	});
 	$(document).on('click', '.js_deleterow', function() {
