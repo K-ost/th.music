@@ -158,6 +158,8 @@
     margin-bottom: 8px; }
     .notification_table_row [class*="col-"]:last-child {
       margin-bottom: 0; }
+  .notification_table input[type="checkbox"] {
+    margin: 0 16px; }
   .btn-chat-fixed {
     bottom: 54px;
     right: 16px; }

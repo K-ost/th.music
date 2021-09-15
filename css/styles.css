@@ -923,7 +923,8 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 /* input radio/checkbox */
 input[type="radio"], input[type="checkbox"] {
-  width: 24px;
+  min-width: 24px;
+  max-width: 24px;
   height: 24px;
   outline: none;
   -webkit-appearance: none;
@@ -2392,6 +2393,28 @@ body {
   .notification_table_date {
     color: #626262;
     text-align: right; }
+  .notification_table_flex {
+    display: flex;
+    align-items: center; }
+  .notification_table input[type="checkbox"] {
+    margin: 0 30px; }
+  .notification_table_lamp {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    min-width: 10px;
+    height: 10px;
+    max-width: 10px;
+    background: #F2F2F2; }
+    .notification_table_lamp.active {
+      background: #F78868; }
+  .notification_table_firstrow {
+    margin-left: 40px;
+    display: flex;
+    align-items: center; }
+    .notification_table_firstrow input[type="checkbox"] {
+      margin-left: 0; }
 
 .notification_header {
   display: flex;
