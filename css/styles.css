@@ -3381,3 +3381,87 @@ a.asc::after {
     transform: matrix(1, 0, 0, -1, 0, 0); }
   .bootstrap-datetimepicker-widget .btn .glyphicon-chevron-down {
     background: url(../images/svg/chevron-down.svg) center center no-repeat !important; }
+
+/* nt_checked_nav */
+.nt_checked_nav {
+  padding-left: 72px;
+  display: flex;
+  align-items: center;
+  min-height: 55px;
+  display: none; }
+  .nt_checked_nav.opened {
+    display: flex; }
+  .nt_checked_nav_item {
+    font-size: 10px;
+    line-height: 11px;
+    text-transform: uppercase;
+    color: #9B9B9B;
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -ms-border-radius: 0;
+    padding: 3px 0;
+    border: 0;
+    cursor: pointer;
+    background: 0; }
+    .nt_checked_nav_item-all {
+      color: #4CB7BF;
+      margin-right: 32px; }
+    .nt_checked_nav_item-check {
+      padding-left: 17px;
+      margin-right: 16px; }
+      .nt_checked_nav_item-check::before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-image: url("../images/svg/check3.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        display: inline-block;
+        vertical-align: middle;
+        width: 10px;
+        height: 8px;
+        left: 0;
+        top: 4px; }
+    .nt_checked_nav_item-del {
+      padding-left: 17px;
+      margin-right: 16px; }
+      .nt_checked_nav_item-del::before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-image: url("../images/svg/trash.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        display: inline-block;
+        vertical-align: middle;
+        width: 13px;
+        height: 16px;
+        left: 0;
+        top: 0; }
+    .nt_checked_nav_item-eye {
+      padding-left: 20px; }
+      .nt_checked_nav_item-eye::before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-image: url("../images/svg/eye3.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        display: inline-block;
+        vertical-align: middle;
+        width: 16px;
+        height: 12px;
+        left: 0;
+        top: 2px; }

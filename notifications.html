@@ -155,7 +155,7 @@
 </ul>
 
         <div class="notification_table">
-          <div class="notification_table_head">
+          <div class="notification_table_head notification_table_head-top">
             <div class="row valign-center">
               <div class="col-12 col-md-4">
                 <div class="notification_table_firstrow">
@@ -168,11 +168,18 @@
             </div>
           </div><!-- /trow -->
 
+          <div class="notification_table_head nt_checked_nav">
+            <div class="nt_checked_nav_item nt_checked_nav_item-check">2 уведомления</div>
+            <button class="nt_checked_nav_item nt_checked_nav_item-all">Выбрать все</button>
+            <button class="nt_checked_nav_item nt_checked_nav_item-del">Удалить</button>
+            <button class="nt_checked_nav_item nt_checked_nav_item-eye">отметить прочитанным</button>
+          </div><!-- /trow -->
+
           <div class="notification_table_row">
             <div class="row">
               <div class="col-12 col-md-4 notification_table_flex">
                 <div class="notification_table_lamp active"></div>
-                <input type="checkbox">
+                <input type="checkbox" class="notification_checkbox">
                 <div class="notification_table_title">Релиз <b>Название релиза</b> не прошел модерацию</div>
               </div>
               <div class="col-12 col-md-5"><small>Причина отклонения:</small> Не указано наличие ненормативной лексики в одной из композиций, <a href="#">узнать подробности</a></div>
@@ -184,7 +191,7 @@
             <div class="row">
               <div class="col-12 col-md-4 notification_table_flex">
                 <div class="notification_table_lamp active"></div>
-                <input type="checkbox">
+                <input type="checkbox" class="notification_checkbox">
                 <div class="notification_table_title">Поступление средств с продаж</div>
               </div>
               <div class="col-12 col-md-5"><b>+ 2 000 руб.</b></div>
@@ -196,7 +203,7 @@
             <div class="row">
               <div class="col-12 col-md-4 notification_table_flex">
                 <div class="notification_table_lamp"></div>
-                <input type="checkbox">
+                <input type="checkbox" class="notification_checkbox">
                 <div class="notification_table_title">Успешное списание средств за ежемесячное продвижение</div>
               </div>
               <div class="col-12 col-md-5"><b>- 3 000 руб.</b></div>

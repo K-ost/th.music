@@ -277,6 +277,19 @@ $(function() {
 	$('input[name="dates_range"]').on('cancel.daterangepicker', function(ev, picker) {
 		$(this).val('');
 	});
+
+
+
+	// notification_checkbox
+	$('.notification_checkbox').on('change', function() {
+		if ( $(this).prop('checked') ) {
+			$(this).closest('.notification_table').find('.notification_table_head-top').hide();
+			$(this).closest('.notification_table').find('.nt_checked_nav').addClass('opened');
+		} else {
+			$(this).closest('.notification_table').find('.notification_table_head-top').show();
+			$(this).closest('.notification_table').find('.nt_checked_nav').removeClass('opened');
+		}
+	});
 		
 	
 

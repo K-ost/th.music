@@ -339,6 +339,19 @@
     .stat_table .col-6:last-child, .stat_table .col-12:last-child {
       margin-bottom: 0; }
   .stat_table_counts {
-    padding-top: 0; } }
+    padding-top: 0; }
+  /* nt_checked_nav */
+  .notification_table_head-top {
+    display: none !important; }
+  .nt_checked_nav {
+    display: none;
+    padding: 20px 24px; }
+    .nt_checked_nav_item {
+      margin: 0 0 15px;
+      display: block; }
+    .nt_checked_nav_item:last-child {
+      margin: 0; }
+    .nt_checked_nav.opened {
+      display: block; } }
 
 /* Mobile */
