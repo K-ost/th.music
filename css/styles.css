@@ -3200,7 +3200,8 @@ a.asc::after {
     display: flex;
     align-items: center;
     border-radius: 10px;
-    padding-right: 16px; }
+    padding-right: 16px;
+    justify-content: space-between; }
     .sm_uptable_head_img {
       min-width: 100px;
       max-width: 100px;
@@ -3215,9 +3216,13 @@ a.asc::after {
       line-height: 14px;
       text-transform: uppercase;
       margin: 0 16px 0 0; }
+    .sm_uptable_head_left {
+      display: flex;
+      align-items: center; }
   .sm_uptable_more {
     min-width: 40px;
-    max-width: 40px; }
+    max-width: 40px;
+    background-repeat: no-repeat; }
   .sm_uptable.opened .sm_uptable_head {
     border-radius: 10px 10px 0 0; }
   .sm_uptable.opened .sm_uptable_head_img img {
@@ -3334,7 +3339,8 @@ a.asc::after {
       outline: none;
       border: 0;
       cursor: pointer;
-      padding: 0; }
+      padding: 0;
+      background-repeat: no-repeat; }
       .sm_uptable_track_more.show {
         background-color: #f2f2f2; }
     .sm_uptable_track .tablehead_error {
